@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import <MAMapKit/MAMapKit.h>
 
 @interface ViewController ()
 
@@ -17,6 +18,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    ///初始化地图
+    MAMapView *_mapView = [[MAMapView alloc] initWithFrame:self.view.bounds];
+    [self.view addSubview:_mapView];
 }
 
 

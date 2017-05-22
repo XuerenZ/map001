@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		87C688EDC2ABD32509342B46 /* libPods-map001.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B0A6D8ED0AD1DA1653213505 /* libPods-map001.a */; };
 		D8DFF4ED1ECE501E000921CD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D8DFF4EC1ECE501E000921CD /* main.m */; };
 		D8DFF4F01ECE501E000921CD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D8DFF4EF1ECE501E000921CD /* AppDelegate.m */; };
 		D8DFF4F31ECE501E000921CD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8DFF4F21ECE501E000921CD /* ViewController.m */; };
@@ -14,9 +15,15 @@
 		D8DFF4F91ECE501E000921CD /* map001.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D8DFF4F71ECE501E000921CD /* map001.xcdatamodeld */; };
 		D8DFF4FB1ECE501E000921CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8DFF4FA1ECE501E000921CD /* Assets.xcassets */; };
 		D8DFF4FE1ECE501E000921CD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8DFF4FC1ECE501E000921CD /* LaunchScreen.storyboard */; };
+		D8E42F341ED24D21009D61F3 /* XRSportMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8E42F331ED24D21009D61F3 /* XRSportMainViewController.m */; };
+		D8E42F381ED24D68009D61F3 /* XRSportSportingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8E42F371ED24D68009D61F3 /* XRSportSportingViewController.m */; };
+		D8E42F3B1ED24D74009D61F3 /* XRSportMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8E42F3A1ED24D74009D61F3 /* XRSportMapViewController.m */; };
+		D8E42F3E1ED24DAD009D61F3 /* XRSportTracking.m in Sources */ = {isa = PBXBuildFile; fileRef = D8E42F3D1ED24DAD009D61F3 /* XRSportTracking.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		46F1813D7133A241AA7701E1 /* Pods-map001.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-map001.debug.xcconfig"; path = "Pods/Target Support Files/Pods-map001/Pods-map001.debug.xcconfig"; sourceTree = "<group>"; };
+		B0A6D8ED0AD1DA1653213505 /* libPods-map001.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-map001.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8DFF4E81ECE501E000921CD /* map001.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = map001.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8DFF4EC1ECE501E000921CD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D8DFF4EE1ECE501E000921CD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -28,6 +35,15 @@
 		D8DFF4FA1ECE501E000921CD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D8DFF4FD1ECE501E000921CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D8DFF4FF1ECE501E000921CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D8E42F321ED24D21009D61F3 /* XRSportMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XRSportMainViewController.h; sourceTree = "<group>"; };
+		D8E42F331ED24D21009D61F3 /* XRSportMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XRSportMainViewController.m; sourceTree = "<group>"; };
+		D8E42F361ED24D68009D61F3 /* XRSportSportingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XRSportSportingViewController.h; sourceTree = "<group>"; };
+		D8E42F371ED24D68009D61F3 /* XRSportSportingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XRSportSportingViewController.m; sourceTree = "<group>"; };
+		D8E42F391ED24D74009D61F3 /* XRSportMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XRSportMapViewController.h; sourceTree = "<group>"; };
+		D8E42F3A1ED24D74009D61F3 /* XRSportMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XRSportMapViewController.m; sourceTree = "<group>"; };
+		D8E42F3C1ED24DAD009D61F3 /* XRSportTracking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XRSportTracking.h; sourceTree = "<group>"; };
+		D8E42F3D1ED24DAD009D61F3 /* XRSportTracking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XRSportTracking.m; sourceTree = "<group>"; };
+		E3186C49D4CD55C33C2E4ED3 /* Pods-map001.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-map001.release.xcconfig"; path = "Pods/Target Support Files/Pods-map001/Pods-map001.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,17 +51,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				87C688EDC2ABD32509342B46 /* libPods-map001.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		082863A25CB1EFE731D5BC06 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				46F1813D7133A241AA7701E1 /* Pods-map001.debug.xcconfig */,
+				E3186C49D4CD55C33C2E4ED3 /* Pods-map001.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		5E5DED4B9EACF84FF6541F2E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B0A6D8ED0AD1DA1653213505 /* libPods-map001.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D8DFF4DF1ECE501E000921CD = {
 			isa = PBXGroup;
 			children = (
 				D8DFF4EA1ECE501E000921CD /* map001 */,
 				D8DFF4E91ECE501E000921CD /* Products */,
+				082863A25CB1EFE731D5BC06 /* Pods */,
+				5E5DED4B9EACF84FF6541F2E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,6 +96,7 @@
 		D8DFF4EA1ECE501E000921CD /* map001 */ = {
 			isa = PBXGroup;
 			children = (
+				D8E42F311ED24CAF009D61F3 /* Sport */,
 				D8DFF4EE1ECE501E000921CD /* AppDelegate.h */,
 				D8DFF4EF1ECE501E000921CD /* AppDelegate.m */,
 				D8DFF4F11ECE501E000921CD /* ViewController.h */,
@@ -82,6 +119,37 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		D8E42F311ED24CAF009D61F3 /* Sport */ = {
+			isa = PBXGroup;
+			children = (
+				D8E42F351ED24D2A009D61F3 /* Controller */,
+				D8E42F3F1ED24DB4009D61F3 /* Model */,
+			);
+			path = Sport;
+			sourceTree = "<group>";
+		};
+		D8E42F351ED24D2A009D61F3 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D8E42F321ED24D21009D61F3 /* XRSportMainViewController.h */,
+				D8E42F331ED24D21009D61F3 /* XRSportMainViewController.m */,
+				D8E42F361ED24D68009D61F3 /* XRSportSportingViewController.h */,
+				D8E42F371ED24D68009D61F3 /* XRSportSportingViewController.m */,
+				D8E42F391ED24D74009D61F3 /* XRSportMapViewController.h */,
+				D8E42F3A1ED24D74009D61F3 /* XRSportMapViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		D8E42F3F1ED24DB4009D61F3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D8E42F3C1ED24DAD009D61F3 /* XRSportTracking.h */,
+				D8E42F3D1ED24DAD009D61F3 /* XRSportTracking.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -89,9 +157,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D8DFF5021ECE501E000921CD /* Build configuration list for PBXNativeTarget "map001" */;
 			buildPhases = (
+				641DEF9BB03D68C1F896039B /* [CP] Check Pods Manifest.lock */,
 				D8DFF4E41ECE501E000921CD /* Sources */,
 				D8DFF4E51ECE501E000921CD /* Frameworks */,
 				D8DFF4E61ECE501E000921CD /* Resources */,
+				827DEC6E1B257A2660A62695 /* [CP] Embed Pods Frameworks */,
+				F64D490D7B5669E2B7CA0FC5 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -108,12 +179,18 @@
 		D8DFF4E01ECE501E000921CD /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = XRSport;
 				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = apple;
 				TargetAttributes = {
 					D8DFF4E71ECE501E000921CD = {
 						CreatedOnToolsVersion = 8.0;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -148,14 +225,66 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		641DEF9BB03D68C1F896039B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		827DEC6E1B257A2660A62695 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-map001/Pods-map001-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F64D490D7B5669E2B7CA0FC5 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-map001/Pods-map001-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D8DFF4E41ECE501E000921CD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				D8DFF4F31ECE501E000921CD /* ViewController.m in Sources */,
+				D8E42F3E1ED24DAD009D61F3 /* XRSportTracking.m in Sources */,
 				D8DFF4F01ECE501E000921CD /* AppDelegate.m in Sources */,
 				D8DFF4F91ECE501E000921CD /* map001.xcdatamodeld in Sources */,
+				D8E42F381ED24D68009D61F3 /* XRSportSportingViewController.m in Sources */,
+				D8E42F341ED24D21009D61F3 /* XRSportMainViewController.m in Sources */,
+				D8E42F3B1ED24D74009D61F3 /* XRSportMapViewController.m in Sources */,
 				D8DFF4ED1ECE501E000921CD /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -274,6 +403,7 @@
 		};
 		D8DFF5031ECE501E000921CD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 46F1813D7133A241AA7701E1 /* Pods-map001.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = map001/Info.plist;
@@ -285,6 +415,7 @@
 		};
 		D8DFF5041ECE501E000921CD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E3186C49D4CD55C33C2E4ED3 /* Pods-map001.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = map001/Info.plist;
@@ -313,6 +444,7 @@
 				D8DFF5041ECE501E000921CD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		87C688EDC2ABD32509342B46 /* libPods-map001.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B0A6D8ED0AD1DA1653213505 /* libPods-map001.a */; };
+		D898D8A41ED4F61700222AFF /* XRSportPolyline.m in Sources */ = {isa = PBXBuildFile; fileRef = D898D8A31ED4F61700222AFF /* XRSportPolyline.m */; };
+		D898D8A71ED5010F00222AFF /* XRSportTrackingLine.m in Sources */ = {isa = PBXBuildFile; fileRef = D898D8A61ED5010F00222AFF /* XRSportTrackingLine.m */; };
 		D8DFF4ED1ECE501E000921CD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D8DFF4EC1ECE501E000921CD /* main.m */; };
 		D8DFF4F01ECE501E000921CD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D8DFF4EF1ECE501E000921CD /* AppDelegate.m */; };
 		D8DFF4F31ECE501E000921CD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8DFF4F21ECE501E000921CD /* ViewController.m */; };
@@ -24,6 +26,10 @@
 /* Begin PBXFileReference section */
 		46F1813D7133A241AA7701E1 /* Pods-map001.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-map001.debug.xcconfig"; path = "Pods/Target Support Files/Pods-map001/Pods-map001.debug.xcconfig"; sourceTree = "<group>"; };
 		B0A6D8ED0AD1DA1653213505 /* libPods-map001.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-map001.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D898D8A21ED4F61700222AFF /* XRSportPolyline.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XRSportPolyline.h; sourceTree = "<group>"; };
+		D898D8A31ED4F61700222AFF /* XRSportPolyline.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XRSportPolyline.m; sourceTree = "<group>"; };
+		D898D8A51ED5010F00222AFF /* XRSportTrackingLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XRSportTrackingLine.h; sourceTree = "<group>"; };
+		D898D8A61ED5010F00222AFF /* XRSportTrackingLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XRSportTrackingLine.m; sourceTree = "<group>"; };
 		D8DFF4E81ECE501E000921CD /* map001.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = map001.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8DFF4EC1ECE501E000921CD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D8DFF4EE1ECE501E000921CD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -146,6 +152,10 @@
 			children = (
 				D8E42F3C1ED24DAD009D61F3 /* XRSportTracking.h */,
 				D8E42F3D1ED24DAD009D61F3 /* XRSportTracking.m */,
+				D898D8A21ED4F61700222AFF /* XRSportPolyline.h */,
+				D898D8A31ED4F61700222AFF /* XRSportPolyline.m */,
+				D898D8A51ED5010F00222AFF /* XRSportTrackingLine.h */,
+				D898D8A61ED5010F00222AFF /* XRSportTrackingLine.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -279,11 +289,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				D8DFF4F31ECE501E000921CD /* ViewController.m in Sources */,
+				D898D8A41ED4F61700222AFF /* XRSportPolyline.m in Sources */,
 				D8E42F3E1ED24DAD009D61F3 /* XRSportTracking.m in Sources */,
 				D8DFF4F01ECE501E000921CD /* AppDelegate.m in Sources */,
 				D8DFF4F91ECE501E000921CD /* map001.xcdatamodeld in Sources */,
 				D8E42F381ED24D68009D61F3 /* XRSportSportingViewController.m in Sources */,
 				D8E42F341ED24D21009D61F3 /* XRSportMainViewController.m in Sources */,
+				D898D8A71ED5010F00222AFF /* XRSportTrackingLine.m in Sources */,
 				D8E42F3B1ED24D74009D61F3 /* XRSportMapViewController.m in Sources */,
 				D8DFF4ED1ECE501E000921CD /* main.m in Sources */,
 			);

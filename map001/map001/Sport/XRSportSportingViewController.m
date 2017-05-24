@@ -38,7 +38,7 @@
     vc.view.frame = self.view.bounds;
     
     // 设置运动轨迹模型
-    vc.sportTracking = [[XRSportTracking alloc] initWithType:_sportType];
+    vc.sportTracking = [[XRSportTracking alloc] initWithType:_sportType state:XRSportStateContinue];
     
     // 4. 完成控制器的添加
     [vc didMoveToParentViewController:self];

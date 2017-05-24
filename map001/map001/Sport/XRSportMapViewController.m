@@ -71,7 +71,10 @@
     if (!updatingLocation) {
         return;
     }
-    
+    // 1. 判断运动状态，只有`继续`才需要绘制运动轨迹
+    if (_sportTracking.sportState != XRSportStateContinue) {
+        return;
+    }
     // 大概 1s 更新一次！
     NSLog(@"%@ %p", userLocation.location, userLocation.location);
     
@@ -88,6 +91,8 @@
         // 3. 添加到地图视图
         [mapView addAnnotation:annotaion];
     }
+    // 绘制轨迹模型
+    [mapView addOverlay:[_sportTracking appendLocation:userLocation.location]];
 }
 
 /**

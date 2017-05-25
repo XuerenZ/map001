@@ -31,5 +31,21 @@
 - (double)distance {
     return [_endLocation distanceFromLocation:_startLocation] * 0.001;
 }
-
+- (XRSportPolyline *)polyline {
+    
+    CLLocationCoordinate2D coords[2];
+    
+    coords[0] = _startLocation.coordinate;
+    coords[1] = _endLocation.coordinate;
+    
+    // `临时`设置放大比例因子
+    CGFloat factor = 8;
+    CGFloat red = factor * self.speed / 255.0;
+    UIColor *color = [UIColor colorWithRed:red green:1 blue:0 alpha:1];
+    
+    // 测试两点间的运动数据
+    NSLog(@"速度 %f 时间 %f 距离 %f", self.speed, self.time, self.distance);
+    
+    return [XRSportPolyline polylineWithCoordinates:coords count:2 color:color];
+}
 @end

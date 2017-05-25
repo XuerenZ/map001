@@ -146,21 +146,26 @@
  */
 - (MAAnnotationView *)mapView:(MAMapView *)mapView viewForAnnotation:(id <MAAnnotation>)annotation
 {
-    if ([annotation isKindOfClass:[MAPointAnnotation class]])
-    {
-        static NSString *pointReuseIndentifier = @"pointReuseIndentifier";
-        MAPinAnnotationView*annotationView = (MAPinAnnotationView*)[mapView dequeueReusableAnnotationViewWithIdentifier:pointReuseIndentifier];
-        if (annotationView == nil)
-        {
-            annotationView = [[MAPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:pointReuseIndentifier];
-        }
-        annotationView.canShowCallout= YES;       //设置气泡可以弹出，默认为NO
-        annotationView.animatesDrop = YES;        //设置标注动画显示，默认为NO
-        annotationView.draggable = YES;        //设置标注可以拖动，默认为NO
-        annotationView.pinColor = MAPinAnnotationColorPurple;
-        return annotationView;
+    // 0. 判断大头针的类型
+    if (![annotation isKindOfClass:[MAPointAnnotation class]]) {
+        return nil;
     }
-    return nil;
+    // 1. 查询可重用大头针视图
+    static NSString *annotaionId = @"annotaionId";
+    MAAnnotationView *annotationView = [mapView dequeueReusableAnnotationViewWithIdentifier:annotaionId];
+    
+    // 2. 如果没有查到，新建视图
+    if (annotationView == nil) {
+        annotationView = [[MAAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:annotaionId];
+    }
+    // 3. 设置大头针视图 - 设置图像
+    // 根据运动类型来创建运动图像
+    UIImage *image = _sportTracking.sportImage;
+    annotationView.image = image;
+    annotationView.centerOffset = CGPointMake(0, -image.size.height * 0.5);
+    
+    // 4. 返回自定义大头针视图
+    return annotationView;
 }
 
 @end

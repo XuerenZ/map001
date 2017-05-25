@@ -79,5 +79,22 @@
 - (double)totalDistance {
     return [[_trackingLines valueForKeyPath:@"@sum.distance"] doubleValue];
 }
+- (UIImage *)sportImage {
+    
+    UIImage *image;
+    switch (_sportType) {
+        case XRSportTypeRun:
+            image = [UIImage imageNamed:@"map_annotation_run"];
+            break;
+        case XRSportTypeWalk:
+            image = [UIImage imageNamed:@"map_annotation_walk"];
+            break;
+        case XRSportTypeBike:
+            image = [UIImage imageNamed:@"map_annotation_bike"];
+            break;
+    }
+    
+    return image;
+}
 
 @end

@@ -30,7 +30,10 @@ typedef enum : NSUInteger {
  @return 追踪模型
  */
 - (instancetype)initWithType:(XRSportType)type state:(XRSportState)state;
-
+/**
+ 运动图像
+ */
+@property (nonatomic, strong, readonly) UIImage *sportImage;
 /**
  运动类型
  */

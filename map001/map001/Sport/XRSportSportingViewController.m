@@ -10,7 +10,10 @@
 #import "XRSportMapViewController.h"
 #import "XRSportTracking.h"
 @interface XRSportSportingViewController ()
-
+/**
+ 运动地图控制器
+ */
+@property (nonatomic, weak) XRSportMapViewController *mapViewController;
 @end
 
 @implementation XRSportSportingViewController
@@ -27,21 +30,23 @@
  */
 - (void)setupMapViewController {
     
-    // 1. 实例化地图控制器
-    XRSportMapViewController *vc = [XRSportMapViewController new];
-    
-    // 2. 添加到当前控制器的子控制器
-    [self addChildViewController:vc];
-    
-    // 3. 将地图控制器的视图，添加到当前视图
-    [self.view addSubview:vc.view];
-    vc.view.frame = self.view.bounds;
-    
+    // 1. 获取地图控制器
+    for (UIViewController *child in self.childViewControllers) {
+        if ([child isKindOfClass:[XRSportMapViewController class]]) {
+            _mapViewController = (XRSportMapViewController *)child;
+            
+            break;
+        }
+    }
+
     // 设置运动轨迹模型
-    vc.sportTracking = [[XRSportTracking alloc] initWithType:_sportType state:XRSportStateContinue];
+    _mapViewController.sportTracking = [[XRSportTracking alloc] initWithType:_sportType state:XRSportStateContinue];
+
+}
+- (IBAction)changeSportState:(UIButton *)sender {
     
-    // 4. 完成控制器的添加
-    [vc didMoveToParentViewController:self];
+    // 修改地图控制器的运动状态
+    _mapViewController.sportTracking.sportState = sender.tag;
 }
 
 - (void)didReceiveMemoryWarning {

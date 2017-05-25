@@ -20,8 +20,9 @@
     // 1. 根据按钮的 tag 区分运动类型
      XRSportType type = sender.tag;
     
-    // 2. 实例化监控控制器
-    XRSportSportingViewController *vc = [XRSportSportingViewController new];
+    // 2. 从 storyboard 加载监控控制器
+    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"XRSportSporting" bundle:nil];
+    XRSportSportingViewController *vc = sb.instantiateInitialViewController;
     
     // 3. 设置运动类型
     vc.sportType = type;

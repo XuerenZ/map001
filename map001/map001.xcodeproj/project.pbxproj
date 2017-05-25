@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		87C688EDC2ABD32509342B46 /* libPods-map001.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B0A6D8ED0AD1DA1653213505 /* libPods-map001.a */; };
+		D87363861ED794AB00AAE527 /* XRSportSporting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D87363851ED794AB00AAE527 /* XRSportSporting.storyboard */; };
 		D898D8A41ED4F61700222AFF /* XRSportPolyline.m in Sources */ = {isa = PBXBuildFile; fileRef = D898D8A31ED4F61700222AFF /* XRSportPolyline.m */; };
 		D898D8A71ED5010F00222AFF /* XRSportTrackingLine.m in Sources */ = {isa = PBXBuildFile; fileRef = D898D8A61ED5010F00222AFF /* XRSportTrackingLine.m */; };
 		D8DFF4ED1ECE501E000921CD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D8DFF4EC1ECE501E000921CD /* main.m */; };
@@ -26,6 +27,7 @@
 /* Begin PBXFileReference section */
 		46F1813D7133A241AA7701E1 /* Pods-map001.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-map001.debug.xcconfig"; path = "Pods/Target Support Files/Pods-map001/Pods-map001.debug.xcconfig"; sourceTree = "<group>"; };
 		B0A6D8ED0AD1DA1653213505 /* libPods-map001.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-map001.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D87363851ED794AB00AAE527 /* XRSportSporting.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = XRSportSporting.storyboard; sourceTree = "<group>"; };
 		D898D8A21ED4F61700222AFF /* XRSportPolyline.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XRSportPolyline.h; sourceTree = "<group>"; };
 		D898D8A31ED4F61700222AFF /* XRSportPolyline.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XRSportPolyline.m; sourceTree = "<group>"; };
 		D898D8A51ED5010F00222AFF /* XRSportTrackingLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XRSportTrackingLine.h; sourceTree = "<group>"; };
@@ -81,6 +83,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		D87363841ED7946D00AAE527 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D87363851ED794AB00AAE527 /* XRSportSporting.storyboard */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
 		D8DFF4DF1ECE501E000921CD = {
 			isa = PBXGroup;
 			children = (
@@ -128,6 +138,7 @@
 		D8E42F311ED24CAF009D61F3 /* Sport */ = {
 			isa = PBXGroup;
 			children = (
+				D87363841ED7946D00AAE527 /* Views */,
 				D8E42F351ED24D2A009D61F3 /* Controller */,
 				D8E42F3F1ED24DB4009D61F3 /* Model */,
 			);
@@ -227,6 +238,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D87363861ED794AB00AAE527 /* XRSportSporting.storyboard in Resources */,
 				D8DFF4FE1ECE501E000921CD /* LaunchScreen.storyboard in Resources */,
 				D8DFF4FB1ECE501E000921CD /* Assets.xcassets in Resources */,
 				D8DFF4F61ECE501E000921CD /* Main.storyboard in Resources */,

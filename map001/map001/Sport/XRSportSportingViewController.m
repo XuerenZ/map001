@@ -13,7 +13,7 @@
 /**
  运动地图控制器
  */
-@property (nonatomic, weak) XRSportMapViewController *mapViewController;
+@property (nonatomic, strong) XRSportMapViewController *mapViewController;
 @end
 
 @implementation XRSportSportingViewController
@@ -21,7 +21,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.view.backgroundColor = [UIColor yellowColor];
+    self.view.backgroundColor = [UIColor darkGrayColor];
     
     [self setupMapViewController];
 }
@@ -30,19 +30,20 @@
  */
 - (void)setupMapViewController {
     
-    // 1. 获取地图控制器
-    for (UIViewController *child in self.childViewControllers) {
-        if ([child isKindOfClass:[XRSportMapViewController class]]) {
-            _mapViewController = (XRSportMapViewController *)child;
-            
-            break;
-        }
-    }
+    // 1. 通过 storyboard 实例化地图控制器
+    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"XRSportSporting" bundle:nil];
+    _mapViewController = [sb instantiateViewControllerWithIdentifier:@"sportMapViewController"];
 
     // 设置运动轨迹模型
     _mapViewController.sportTracking = [[XRSportTracking alloc] initWithType:_sportType state:XRSportStateContinue];
 
 }
+#pragma mark - 监听方法
+- (IBAction)showMapViewController {
+    // 模态展现
+    [self presentViewController:_mapViewController animated:YES completion:nil];
+}
+
 - (IBAction)changeSportState:(UIButton *)sender {
     
     // 修改地图控制器的运动状态

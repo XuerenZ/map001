@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		87C688EDC2ABD32509342B46 /* libPods-map001.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B0A6D8ED0AD1DA1653213505 /* libPods-map001.a */; };
 		D87363861ED794AB00AAE527 /* XRSportSporting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D87363851ED794AB00AAE527 /* XRSportSporting.storyboard */; };
+		D87555A21EEF326C007D31B7 /* XRSportMapModelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D87555A11EEF326C007D31B7 /* XRSportMapModelViewController.m */; };
+		D87555A61EEF3641007D31B7 /* XRCircleAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = D87555A51EEF3641007D31B7 /* XRCircleAnimator.m */; };
 		D898D8A41ED4F61700222AFF /* XRSportPolyline.m in Sources */ = {isa = PBXBuildFile; fileRef = D898D8A31ED4F61700222AFF /* XRSportPolyline.m */; };
 		D898D8A71ED5010F00222AFF /* XRSportTrackingLine.m in Sources */ = {isa = PBXBuildFile; fileRef = D898D8A61ED5010F00222AFF /* XRSportTrackingLine.m */; };
 		D8DFF4ED1ECE501E000921CD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D8DFF4EC1ECE501E000921CD /* main.m */; };
@@ -28,6 +30,10 @@
 		46F1813D7133A241AA7701E1 /* Pods-map001.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-map001.debug.xcconfig"; path = "Pods/Target Support Files/Pods-map001/Pods-map001.debug.xcconfig"; sourceTree = "<group>"; };
 		B0A6D8ED0AD1DA1653213505 /* libPods-map001.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-map001.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D87363851ED794AB00AAE527 /* XRSportSporting.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = XRSportSporting.storyboard; sourceTree = "<group>"; };
+		D87555A01EEF326C007D31B7 /* XRSportMapModelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XRSportMapModelViewController.h; sourceTree = "<group>"; };
+		D87555A11EEF326C007D31B7 /* XRSportMapModelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XRSportMapModelViewController.m; sourceTree = "<group>"; };
+		D87555A41EEF3641007D31B7 /* XRCircleAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XRCircleAnimator.h; sourceTree = "<group>"; };
+		D87555A51EEF3641007D31B7 /* XRCircleAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XRCircleAnimator.m; sourceTree = "<group>"; };
 		D898D8A21ED4F61700222AFF /* XRSportPolyline.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XRSportPolyline.h; sourceTree = "<group>"; };
 		D898D8A31ED4F61700222AFF /* XRSportPolyline.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XRSportPolyline.m; sourceTree = "<group>"; };
 		D898D8A51ED5010F00222AFF /* XRSportTrackingLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XRSportTrackingLine.h; sourceTree = "<group>"; };
@@ -91,6 +97,15 @@
 			name = Views;
 			sourceTree = "<group>";
 		};
+		D87555A31EEF3612007D31B7 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				D87555A41EEF3641007D31B7 /* XRCircleAnimator.h */,
+				D87555A51EEF3641007D31B7 /* XRCircleAnimator.m */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
 		D8DFF4DF1ECE501E000921CD = {
 			isa = PBXGroup;
 			children = (
@@ -138,6 +153,7 @@
 		D8E42F311ED24CAF009D61F3 /* Sport */ = {
 			isa = PBXGroup;
 			children = (
+				D87555A31EEF3612007D31B7 /* Tools */,
 				D87363841ED7946D00AAE527 /* Views */,
 				D8E42F351ED24D2A009D61F3 /* Controller */,
 				D8E42F3F1ED24DB4009D61F3 /* Model */,
@@ -154,6 +170,8 @@
 				D8E42F371ED24D68009D61F3 /* XRSportSportingViewController.m */,
 				D8E42F391ED24D74009D61F3 /* XRSportMapViewController.h */,
 				D8E42F3A1ED24D74009D61F3 /* XRSportMapViewController.m */,
+				D87555A01EEF326C007D31B7 /* XRSportMapModelViewController.h */,
+				D87555A11EEF326C007D31B7 /* XRSportMapModelViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -300,8 +318,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D87555A61EEF3641007D31B7 /* XRCircleAnimator.m in Sources */,
 				D8DFF4F31ECE501E000921CD /* ViewController.m in Sources */,
 				D898D8A41ED4F61700222AFF /* XRSportPolyline.m in Sources */,
+				D87555A21EEF326C007D31B7 /* XRSportMapModelViewController.m in Sources */,
 				D8E42F3E1ED24DAD009D61F3 /* XRSportTracking.m in Sources */,
 				D8DFF4F01ECE501E000921CD /* AppDelegate.m in Sources */,
 				D8DFF4F91ECE501E000921CD /* map001.xcdatamodeld in Sources */,

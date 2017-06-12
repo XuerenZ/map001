@@ -8,8 +8,10 @@
 
 #import "XRSportMapViewController.h"
 #import <MAMapKit/MAMapKit.h>
-
-@interface XRSportMapViewController ()<MAMapViewDelegate>
+#import "XRCircleAnimator.h"
+#import "XRSportMapModelViewController.h"
+#import <MAMapKit/MAMapKit.h>
+@interface XRSportMapViewController ()<MAMapViewDelegate, UIPopoverPresentationControllerDelegate>
 
 @end
 
@@ -17,12 +19,30 @@
 {
     /// 起始位置
     CLLocation *_startLocation;
-}
+    /// 同心圆转场动画器
+    XRCircleAnimator *_circleAnimator;
 
+}
+- (instancetype)initWithCoder:(NSCoder *)coder {
+    self = [super initWithCoder:coder];
+    if (self) {
+        // 1. 展现样式设置为自定义
+        self.modalPresentationStyle = UIModalPresentationCustom;
+        
+        // 2. 设置转场代理
+        _circleAnimator = [XRCircleAnimator new];
+        self.transitioningDelegate = _circleAnimator;
+    }
+    return self;
+}
+- (void)awakeFromNib {
+    [super awakeFromNib];
+    
+    [self setupMapView];
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    [self setupMapView];
 }
 #pragma mark - 设置界面
 /**
@@ -57,7 +77,42 @@
     // 9. 设置代理
     mapView.delegate = self;
 }
-
+#pragma mark - 监听方法
+- (IBAction)closeMapView {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+#pragma mark - popover
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    
+    // 1. 判断跳转控制器的类型
+    if (![segue.destinationViewController isKindOfClass:[XRSportMapModelViewController class]]) {
+        return;
+    }
+    
+    XRSportMapModelViewController *vc = (XRSportMapModelViewController *)segue.destinationViewController;
+    
+    // 2. 验证 popover 和传统模态之间的区别，如果要自定义 popover 的样式，就可以通过 popoverPresentationController
+    NSLog(@"%@", vc.popoverPresentationController);
+    
+    // 3. 设置代理
+    vc.popoverPresentationController.delegate = self;
+    
+    // 4. 设置喜欢的大小，如果 width 设置为 0，宽度交给系统设置！
+    vc.preferredContentSize = CGSizeMake(0, 120);
+    
+    // 5. 设置地图视图的显示模式
+    [vc setDidSelectedMapMode:^(MAMapType type) {
+        self.mapView.mapType = type;
+    }];
+    
+    // 6. 设置 vc 的当前显示模式
+    vc.currentType = _mapView.mapType;
+}
+#pragma mark - UIPopoverPresentationControllerDelegate
+- (UIModalPresentationStyle)adaptivePresentationStyleForPresentationController:(UIPresentationController *)controller {
+    // 不让系统自适应 - adaptive
+    return UIModalPresentationNone;
+}
 #pragma mark -MAMapViewDelegate
 /**
  * @brief 位置或者设备方向更新后，会调用此函数

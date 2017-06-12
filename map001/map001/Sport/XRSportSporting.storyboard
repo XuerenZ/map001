@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -19,11 +20,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EG2-Io-LEG">
-                                <connections>
-                                    <segue destination="kCQ-eb-bb7" kind="embed" id="4Ym-aI-WRV"/>
-                                </connections>
-                            </containerView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xEs-aJ-tOP" userLabel="控制面板">
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gwS-uo-6Kq">
@@ -47,6 +43,7 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
+                                    <constraint firstAttribute="height" constant="166" id="R8C-gX-WfX"/>
                                     <constraint firstItem="M8L-Ht-QCb" firstAttribute="centerX" secondItem="xEs-aJ-tOP" secondAttribute="centerX" id="bgT-fG-1ca"/>
                                     <constraint firstItem="gwS-uo-6Kq" firstAttribute="centerX" secondItem="xEs-aJ-tOP" secondAttribute="centerX" multiplier="0.5" id="hOl-FD-aG6"/>
                                     <constraint firstItem="UOS-M5-6i8" firstAttribute="centerY" secondItem="xEs-aJ-tOP" secondAttribute="centerY" id="mzT-Yu-thX"/>
@@ -55,17 +52,30 @@
                                     <constraint firstItem="gwS-uo-6Kq" firstAttribute="centerY" secondItem="xEs-aJ-tOP" secondAttribute="centerY" id="zlX-o5-60k"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ywk-PI-VI0">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="1ff-yz-LfJ"/>
+                                    <constraint firstAttribute="width" constant="40" id="kAG-gA-PQc"/>
+                                </constraints>
+                                <state key="normal" image="ic_sport_map"/>
+                                <connections>
+                                    <action selector="showMapViewController" destination="2yc-em-bVo" eventType="touchUpInside" id="Vaw-QZ-icO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vZq-jT-9MN">
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <state key="normal" title="  GPS已断开" image="ic_sport_gps_disconnect"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.42352941179999998" green="0.73333333329999995" blue="0.32156862749999998" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="EG2-Io-LEG" secondAttribute="trailing" id="3iU-ZB-2aG"/>
+                            <constraint firstItem="ywk-PI-VI0" firstAttribute="top" secondItem="KCR-PO-aDe" secondAttribute="bottom" constant="3" id="HiT-qb-mGp"/>
+                            <constraint firstItem="ywk-PI-VI0" firstAttribute="centerY" secondItem="vZq-jT-9MN" secondAttribute="centerY" id="Nkh-fn-iAN"/>
                             <constraint firstAttribute="trailing" secondItem="xEs-aJ-tOP" secondAttribute="trailing" id="euV-DQ-Yah"/>
-                            <constraint firstItem="EG2-Io-LEG" firstAttribute="height" secondItem="3ia-My-u8E" secondAttribute="height" multiplier="0.75" id="gh2-B3-C6I"/>
-                            <constraint firstItem="EG2-Io-LEG" firstAttribute="leading" secondItem="3ia-My-u8E" secondAttribute="leading" id="gwb-m2-3Qn"/>
+                            <constraint firstItem="vZq-jT-9MN" firstAttribute="leading" secondItem="3ia-My-u8E" secondAttribute="leadingMargin" constant="16" id="g1x-jc-am4"/>
                             <constraint firstItem="xEs-aJ-tOP" firstAttribute="leading" secondItem="3ia-My-u8E" secondAttribute="leading" id="h1r-Db-0XY"/>
-                            <constraint firstItem="xEs-aJ-tOP" firstAttribute="top" secondItem="EG2-Io-LEG" secondAttribute="bottom" id="iJu-oU-mcm"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ywk-PI-VI0" secondAttribute="trailing" constant="11" id="mVg-nb-Whj"/>
                             <constraint firstItem="1Jh-w0-LeE" firstAttribute="top" secondItem="xEs-aJ-tOP" secondAttribute="bottom" id="uNr-0N-T5f"/>
-                            <constraint firstItem="EG2-Io-LEG" firstAttribute="top" secondItem="3ia-My-u8E" secondAttribute="top" id="w53-LX-Uns"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -76,20 +86,77 @@
         <!--Sport Map View Controller-->
         <scene sceneID="iW7-CA-P5g">
             <objects>
-                <viewController id="kCQ-eb-bb7" customClass="XRSportMapViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="sportMapViewController" id="kCQ-eb-bb7" customClass="XRSportMapViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="cLT-3x-YbO"/>
                         <viewControllerLayoutGuide type="bottom" id="Apo-MV-OoA"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="cw8-v9-EpC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="500.5"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DNl-4w-Au1">
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Erv-gI-AAL">
+                                    <frame key="frameInset"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uFK-pW-ije">
+                                            <frame key="frameInset" minX="268" minY="434" width="46" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" title="Button"/>
+                                            <connections>
+                                                <action selector="closeMapView" destination="kCQ-eb-bb7" eventType="touchUpInside" id="aum-Kb-Uyo"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uze-8I-vHw">
+                                            <frame key="frameInset" minX="23" minY="434" width="46" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" title="Button"/>
+                                            <connections>
+                                                <segue destination="Xpt-iL-w92" kind="popoverPresentation" popoverAnchorView="Uze-8I-vHw" id="wtt-tD-aV6">
+                                                    <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                                </segue>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                </view>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="DNl-4w-Au1" firstAttribute="leading" secondItem="cw8-v9-EpC" secondAttribute="leading" constant="16" id="5Ii-f6-aX5"/>
+                            <constraint firstItem="DNl-4w-Au1" firstAttribute="top" secondItem="cLT-3x-YbO" secondAttribute="bottom" id="NyF-81-mW7"/>
+                            <constraint firstItem="Apo-MV-OoA" firstAttribute="top" secondItem="DNl-4w-Au1" secondAttribute="bottom" id="ZQZ-Ev-rYx"/>
+                            <constraint firstAttribute="trailing" secondItem="DNl-4w-Au1" secondAttribute="trailing" constant="16" id="pww-Va-re0"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mSf-0s-The" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="590" y="-6"/>
+            <point key="canvasLocation" x="714" y="44"/>
+        </scene>
+        <!--Sport Map Model View Controller-->
+        <scene sceneID="R7s-OT-UAm">
+            <objects>
+                <viewController id="Xpt-iL-w92" customClass="XRSportMapModelViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Jhq-wL-xmn"/>
+                        <viewControllerLayoutGuide type="bottom" id="8mh-C4-KBR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="j1W-d6-bIX">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="coU-y8-1dS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1511" y="44"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="ic_sport_gps_disconnect" width="56" height="23"/>
+        <image name="ic_sport_map" width="30" height="30"/>
+    </resources>
 </document>

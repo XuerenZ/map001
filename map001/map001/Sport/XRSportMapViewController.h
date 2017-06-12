@@ -13,4 +13,8 @@
  本次运动轨迹追踪模型
  */
 @property (nonatomic, strong) XRSportTracking *sportTracking;
+/**
+ 地图视图
+ */
+@property (nonatomic, weak, readonly) MAMapView *mapView;
 @end

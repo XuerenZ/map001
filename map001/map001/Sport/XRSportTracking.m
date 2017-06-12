@@ -64,6 +64,16 @@
     }
     return self;
 }
+#pragma mark - 设置数据
+-(void)setSportState:(XRSportState)sportState{
+    _sportState = sportState;
+    
+    // 判断状态类型，如果不是继续，需要清空起始点
+    if (_sportState != XRSportStateContinue) {
+        _startLocation = nil;
+    }
+}
+
 - (double)avgSpeed {
     return [[_trackingLines valueForKeyPath:@"@avg.speed"] doubleValue];
 }

@@ -21,6 +21,16 @@ typedef enum : NSUInteger {
     XRSportStateContinue,
     XRSportStateFinish,
 } XRSportState;
+/// GPS信号状态
+typedef enum : NSUInteger {
+    XRSportGPSSignalStateDisconnect,
+    XRSportGPSSignalStateBad,
+    XRSportGPSSignalStateNormal,
+    XRSportGPSSignalStateGood
+} XRSportGPSSignalState;
+
+/// GPS 信号变化通知
+extern NSString *const XRSportGPSSignalChangedNotification;
 @interface XRSportTracking : NSObject
 /**
  使用运动类型实例化追踪模型

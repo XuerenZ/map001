@@ -53,8 +53,8 @@
     // 1. 实例化地图视图
     MAMapView *mapView = [[MAMapView alloc] initWithFrame:self.view.bounds];
     
-    // 2. 添加到根视图
-    [self.view addSubview:mapView];
+    // 2. 添加到根视图 - 添加到最底层
+    [self.view insertSubview:mapView atIndex:0];
     
     // 3. 隐藏比例尺
     mapView.showsScale = NO;
@@ -76,6 +76,8 @@
     
     // 9. 设置代理
     mapView.delegate = self;
+    // 10. 记录地图视图
+    _mapView = mapView;
 }
 #pragma mark - 监听方法
 - (IBAction)closeMapView {

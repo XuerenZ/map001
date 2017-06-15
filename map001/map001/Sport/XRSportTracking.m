@@ -93,7 +93,11 @@ NSString *const XRSportGPSSignalChangedNotification = @"XRSportGPSSignalChangedN
 - (double)totalTime {
     return [[_trackingLines valueForKeyPath:@"@sum.time"] doubleValue];
 }
-
+- (NSString *)totalTimeStr {
+    
+    NSInteger totalTime = (NSInteger)self.totalTime;
+    return [NSString stringWithFormat:@"%02zd:%02zd:%02zd", totalTime / 3600, (totalTime % 3600) / 60, totalTime % 60];
+}
 - (double)totalDistance {
     return [[_trackingLines valueForKeyPath:@"@sum.distance"] doubleValue];
 }

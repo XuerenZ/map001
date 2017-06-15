@@ -171,14 +171,18 @@
                             <constraint firstItem="DNl-4w-Au1" firstAttribute="leading" secondItem="cw8-v9-EpC" secondAttribute="leading" id="5Ii-f6-aX5"/>
                             <constraint firstItem="DNl-4w-Au1" firstAttribute="top" secondItem="uFK-pW-ije" secondAttribute="bottom" constant="22" id="Kke-qc-jk6"/>
                             <constraint firstItem="72t-dP-wRx" firstAttribute="leading" secondItem="cw8-v9-EpC" secondAttribute="leadingMargin" constant="16" id="O3D-Ub-M0I"/>
+                            <constraint firstItem="Uze-8I-vHw" firstAttribute="leading" secondItem="cw8-v9-EpC" secondAttribute="leadingMargin" constant="16" id="Oeu-7q-Ssy"/>
                             <constraint firstItem="Apo-MV-OoA" firstAttribute="top" secondItem="DNl-4w-Au1" secondAttribute="bottom" id="ZQZ-Ev-rYx"/>
-                            <constraint firstItem="Uze-8I-vHw" firstAttribute="leading" secondItem="cw8-v9-EpC" secondAttribute="leadingMargin" constant="16" id="kND-y9-7EO"/>
                             <constraint firstItem="72t-dP-wRx" firstAttribute="top" secondItem="cLT-3x-YbO" secondAttribute="bottom" constant="3" id="nhM-XW-fID"/>
                             <constraint firstAttribute="trailing" secondItem="DNl-4w-Au1" secondAttribute="trailing" id="pww-Va-re0"/>
                             <constraint firstItem="DNl-4w-Au1" firstAttribute="top" secondItem="Uze-8I-vHw" secondAttribute="bottom" constant="22" id="tht-1G-DXh"/>
                             <constraint firstAttribute="trailingMargin" secondItem="uFK-pW-ije" secondAttribute="trailing" constant="16" id="ucS-VQ-2Qo"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="distanceLabel" destination="TVy-q2-lZF" id="wIh-pB-HO7"/>
+                        <outlet property="timeLabel" destination="QKd-UO-VYG" id="AiM-t4-Amq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mSf-0s-The" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

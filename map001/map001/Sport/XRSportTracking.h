@@ -73,6 +73,10 @@ extern NSString *const XRSportGPSSignalChangedNotification;
  */
 @property (nonatomic, readonly) double totalTime;
 /**
+ 总时长 00:00:00 格式的字符串
+ */
+@property (nonatomic, readonly) NSString *totalTimeStr;
+/**
  总距离
  */
 @property (nonatomic, readonly) double totalDistance;

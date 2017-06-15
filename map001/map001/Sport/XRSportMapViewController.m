@@ -12,7 +12,8 @@
 #import "XRSportMapModelViewController.h"
 #import <MAMapKit/MAMapKit.h>
 @interface XRSportMapViewController ()<MAMapViewDelegate, UIPopoverPresentationControllerDelegate>
-
+@property (weak, nonatomic) IBOutlet UILabel *distanceLabel;
+@property (weak, nonatomic) IBOutlet UILabel *timeLabel;
 @end
 
 @implementation XRSportMapViewController
@@ -99,9 +100,10 @@
     // 3. 设置代理
     vc.popoverPresentationController.delegate = self;
     
-    // 4. 设置喜欢的大小，如果 width 设置为 0，宽度交给系统设置！
+     //4. 设置喜欢的大小，如果 width 设置为 0，宽度交给系统设置！
     vc.preferredContentSize = CGSizeMake(0, 120);
-    
+    vc.popoverPresentationController.permittedArrowDirections = UIPopoverArrowDirectionDown;
+
     // 5. 设置地图视图的显示模式
     [vc setDidSelectedMapMode:^(MAMapType type) {
         self.mapView.mapType = type;
@@ -150,30 +152,41 @@
     }
     // 绘制轨迹模型
     [mapView addOverlay:[_sportTracking appendLocation:userLocation.location]];
+    [self updateUIDisplay];
 }
-
+/**
+ 更新 UI 显示
+ */
+- (void)updateUIDisplay {
+    
+    // 1. 设置距离
+    _distanceLabel.text = [NSString stringWithFormat:@"%.02f", _sportTracking.totalDistance];
+    
+    // 2. 设置时间
+    _timeLabel.text = _sportTracking.totalTimeStr;
+}
 /**
  * @brief 单击地图回调，返回经纬度
  * @param mapView 地图View
  * @param coordinate 经纬度
  */
-- (void)mapView:(MAMapView *)mapView didSingleTappedAtCoordinate:(CLLocationCoordinate2D)coordinate
-{
-    NSLog(@"%f %f", coordinate.latitude, coordinate.longitude);
-    
-    // 开始画线
-    // 1. 建立结构体的数组
-    CLLocationCoordinate2D coords[2];
-    
-    coords[0] = coordinate;
-    coords[1] = _startLocation.coordinate;
-    
-    // 2. 构造折线对象
-    MAPolyline *polyline = [MAPolyline polylineWithCoordinates:coords count:2];
-    
-    // 3. 添加到地图
-    [mapView addOverlay:polyline];
-}
+//- (void)mapView:(MAMapView *)mapView didSingleTappedAtCoordinate:(CLLocationCoordinate2D)coordinate
+//{
+//    NSLog(@"%f %f", coordinate.latitude, coordinate.longitude);
+//    
+//    // 开始画线
+//    // 1. 建立结构体的数组
+//    CLLocationCoordinate2D coords[2];
+//    
+//    coords[0] = coordinate;
+//    coords[1] = _startLocation.coordinate;
+//    
+//    // 2. 构造折线对象
+//    MAPolyline *polyline = [MAPolyline polylineWithCoordinates:coords count:2];
+//    
+//    // 3. 添加到地图
+//    [mapView addOverlay:polyline];
+//}
 /**
  * @brief 根据overlay生成对应的Renderer
  * @param mapView 地图View

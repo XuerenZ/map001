@@ -67,11 +67,16 @@
                                     <action selector="showMapViewController" destination="2yc-em-bVo" eventType="touchUpInside" id="Vaw-QZ-icO"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vZq-jT-9MN" customClass="XRSportGPSSingalBtn">
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vZq-jT-9MN" customClass="XRSportGPSSingalBtn">
+                                <color key="backgroundColor" white="0.0" alpha="0.20000000000000001" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <inset key="contentEdgeInsets" minX="4" minY="4" maxX="0.0" maxY="4"/>
                                 <state key="normal" title="  GPS已断开" image="ic_sport_gps_disconnect"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="isMapButton" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="16"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </button>
                         </subviews>
@@ -159,7 +164,8 @@
                                     <action selector="closeMapView" destination="kCQ-eb-bb7" eventType="touchUpInside" id="aum-Kb-Uyo"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="72t-dP-wRx" customClass="XRSportGPSSingalBtn">
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="72t-dP-wRx" userLabel="GPS已断开" customClass="XRSportGPSSingalBtn">
+                                <inset key="contentEdgeInsets" minX="4" minY="4" maxX="8" maxY="4"/>
                                 <state key="normal" title="  GPS已断开" image="ic_sport_gps_map_disconnect"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="isMapButton" value="YES"/>

@@ -25,36 +25,99 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ju2-UO-tFL" userLabel="数字面板">
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IBm-G0-Dcp">
+                                        <fontDescription key="fontDescription" name="DINCond-Bold" family="DINCond-Bold" pointSize="90"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="距离" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qrb-wV-ive">
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="txN-ub-jQZ">
+                                        <fontDescription key="fontDescription" name="DINCond-Bold" family="DINCond-Bold" pointSize="28"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="时长" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hbd-rd-QkU">
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="平均速度(公里／小时)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oWF-lX-abK">
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dfG-qs-GeX">
+                                        <fontDescription key="fontDescription" name="DINCond-Bold" family="DINCond-Bold" pointSize="28"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="oWF-lX-abK" firstAttribute="centerY" secondItem="Hbd-rd-QkU" secondAttribute="centerY" id="3eQ-8H-7Xs"/>
+                                    <constraint firstItem="Hbd-rd-QkU" firstAttribute="top" secondItem="txN-ub-jQZ" secondAttribute="bottom" id="5lQ-0R-fpz"/>
+                                    <constraint firstItem="Qrb-wV-ive" firstAttribute="centerY" secondItem="ju2-UO-tFL" secondAttribute="centerY" multiplier="1.2" id="N77-Ik-Mjc"/>
+                                    <constraint firstItem="Hbd-rd-QkU" firstAttribute="centerY" secondItem="ju2-UO-tFL" secondAttribute="centerY" multiplier="1.8" id="Q9x-x8-qCV"/>
+                                    <constraint firstItem="Qrb-wV-ive" firstAttribute="top" secondItem="IBm-G0-Dcp" secondAttribute="bottom" constant="4" id="SDL-zJ-r3D"/>
+                                    <constraint firstItem="oWF-lX-abK" firstAttribute="centerX" secondItem="ju2-UO-tFL" secondAttribute="centerX" multiplier="1.5" id="Slg-iS-k7J"/>
+                                    <constraint firstItem="dfG-qs-GeX" firstAttribute="centerX" secondItem="oWF-lX-abK" secondAttribute="centerX" id="SsG-aQ-CAY"/>
+                                    <constraint firstItem="Hbd-rd-QkU" firstAttribute="centerX" secondItem="txN-ub-jQZ" secondAttribute="centerX" id="f58-6L-LUD"/>
+                                    <constraint firstItem="Qrb-wV-ive" firstAttribute="centerX" secondItem="ju2-UO-tFL" secondAttribute="centerX" id="fxa-Bk-bwU"/>
+                                    <constraint firstItem="Qrb-wV-ive" firstAttribute="centerX" secondItem="IBm-G0-Dcp" secondAttribute="centerX" id="o5f-91-WBr"/>
+                                    <constraint firstItem="Hbd-rd-QkU" firstAttribute="centerX" secondItem="ju2-UO-tFL" secondAttribute="centerX" multiplier="0.5" id="qCo-7s-uON"/>
+                                    <constraint firstItem="oWF-lX-abK" firstAttribute="top" secondItem="dfG-qs-GeX" secondAttribute="bottom" id="rS4-ge-3yI"/>
+                                </constraints>
+                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xEs-aJ-tOP" userLabel="控制面板">
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gwS-uo-6Kq">
-                                        <state key="normal" title="暂停"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gwS-uo-6Kq" userLabel="暂停">
+                                        <state key="normal" image="ic_sport_pause"/>
                                         <connections>
                                             <action selector="changeSportState:" destination="2yc-em-bVo" eventType="touchUpInside" id="rHg-l2-E3R"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M8L-Ht-QCb">
-                                        <state key="normal" title="继续"/>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M8L-Ht-QCb" userLabel="继续">
+                                        <state key="normal" image="ic_sport_continue"/>
                                         <connections>
                                             <action selector="changeSportState:" destination="2yc-em-bVo" eventType="touchUpInside" id="Si3-V2-Ok2"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UOS-M5-6i8">
-                                        <state key="normal" title="结束"/>
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UOS-M5-6i8" userLabel="结束">
+                                        <state key="normal" image="ic_sport_finish"/>
                                         <connections>
                                             <action selector="changeSportState:" destination="2yc-em-bVo" eventType="touchUpInside" id="2dG-Cb-2cA"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fOy-mK-x7B">
+                                        <state key="normal" image="ic_sport_camera"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ll3-ZI-3KK">
+                                        <state key="normal" image="ic_sport_lock_1"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GJ8-ze-S06">
+                                        <state key="normal" image="ic_sport_settings"/>
+                                    </button>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="166" id="R8C-gX-WfX"/>
-                                    <constraint firstItem="M8L-Ht-QCb" firstAttribute="centerX" secondItem="xEs-aJ-tOP" secondAttribute="centerX" id="bgT-fG-1ca"/>
-                                    <constraint firstItem="gwS-uo-6Kq" firstAttribute="centerX" secondItem="xEs-aJ-tOP" secondAttribute="centerX" multiplier="0.5" id="hOl-FD-aG6"/>
-                                    <constraint firstItem="UOS-M5-6i8" firstAttribute="centerY" secondItem="xEs-aJ-tOP" secondAttribute="centerY" id="mzT-Yu-thX"/>
-                                    <constraint firstItem="UOS-M5-6i8" firstAttribute="centerX" secondItem="xEs-aJ-tOP" secondAttribute="centerX" multiplier="1.5" id="pvj-9Q-gl0"/>
-                                    <constraint firstItem="M8L-Ht-QCb" firstAttribute="centerY" secondItem="xEs-aJ-tOP" secondAttribute="centerY" id="x7o-s7-pZA"/>
-                                    <constraint firstItem="gwS-uo-6Kq" firstAttribute="centerY" secondItem="xEs-aJ-tOP" secondAttribute="centerY" id="zlX-o5-60k"/>
+                                    <constraint firstItem="Ll3-ZI-3KK" firstAttribute="centerX" secondItem="xEs-aJ-tOP" secondAttribute="centerX" id="20Q-bw-xXc"/>
+                                    <constraint firstItem="Ll3-ZI-3KK" firstAttribute="centerY" secondItem="fOy-mK-x7B" secondAttribute="centerY" id="5S5-XC-1Oz"/>
+                                    <constraint firstItem="gwS-uo-6Kq" firstAttribute="centerY" secondItem="M8L-Ht-QCb" secondAttribute="centerY" id="8oz-MB-DzO"/>
+                                    <constraint firstAttribute="trailing" secondItem="GJ8-ze-S06" secondAttribute="trailing" constant="12" id="Hga-ux-adt"/>
+                                    <constraint firstItem="UOS-M5-6i8" firstAttribute="centerX" secondItem="gwS-uo-6Kq" secondAttribute="centerX" id="MA3-8a-dkp"/>
+                                    <constraint firstItem="gwS-uo-6Kq" firstAttribute="centerX" secondItem="xEs-aJ-tOP" secondAttribute="centerX" id="QdK-ft-nqS"/>
+                                    <constraint firstItem="GJ8-ze-S06" firstAttribute="centerY" secondItem="fOy-mK-x7B" secondAttribute="centerY" id="RmY-7D-mrv"/>
+                                    <constraint firstItem="UOS-M5-6i8" firstAttribute="centerY" secondItem="gwS-uo-6Kq" secondAttribute="centerY" id="aRy-Hs-SLa"/>
+                                    <constraint firstItem="gwS-uo-6Kq" firstAttribute="centerY" secondItem="xEs-aJ-tOP" secondAttribute="centerY" multiplier="0.8" id="f4w-wa-qNX"/>
+                                    <constraint firstAttribute="bottom" secondItem="fOy-mK-x7B" secondAttribute="bottom" constant="12" id="hpG-4k-tXF"/>
+                                    <constraint firstItem="gwS-uo-6Kq" firstAttribute="centerX" secondItem="M8L-Ht-QCb" secondAttribute="centerX" id="mxz-EO-LVP"/>
+                                    <constraint firstItem="fOy-mK-x7B" firstAttribute="leading" secondItem="xEs-aJ-tOP" secondAttribute="leading" constant="12" id="vBk-jz-PaW"/>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ywk-PI-VI0">
@@ -82,13 +145,18 @@
                         </subviews>
                         <color key="backgroundColor" red="0.42352941179999998" green="0.73333333329999995" blue="0.32156862749999998" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="ju2-UO-tFL" firstAttribute="top" secondItem="3ia-My-u8E" secondAttribute="topMargin" id="5q4-rS-vIc"/>
+                            <constraint firstItem="ju2-UO-tFL" firstAttribute="leading" secondItem="3ia-My-u8E" secondAttribute="leading" id="7xl-RT-NeS"/>
+                            <constraint firstItem="xEs-aJ-tOP" firstAttribute="top" secondItem="ju2-UO-tFL" secondAttribute="bottom" id="ClW-wI-BMO"/>
                             <constraint firstItem="ywk-PI-VI0" firstAttribute="top" secondItem="KCR-PO-aDe" secondAttribute="bottom" constant="3" id="HiT-qb-mGp"/>
+                            <constraint firstItem="1Jh-w0-LeE" firstAttribute="top" secondItem="xEs-aJ-tOP" secondAttribute="bottom" id="Hxb-Rd-3qO"/>
+                            <constraint firstItem="ju2-UO-tFL" firstAttribute="height" secondItem="3ia-My-u8E" secondAttribute="height" multiplier="0.6" id="K2q-tI-fu2"/>
                             <constraint firstItem="ywk-PI-VI0" firstAttribute="centerY" secondItem="vZq-jT-9MN" secondAttribute="centerY" id="Nkh-fn-iAN"/>
-                            <constraint firstAttribute="trailing" secondItem="xEs-aJ-tOP" secondAttribute="trailing" id="euV-DQ-Yah"/>
+                            <constraint firstItem="xEs-aJ-tOP" firstAttribute="leading" secondItem="3ia-My-u8E" secondAttribute="leading" id="VEc-X1-l7m"/>
                             <constraint firstItem="vZq-jT-9MN" firstAttribute="leading" secondItem="3ia-My-u8E" secondAttribute="leadingMargin" constant="16" id="g1x-jc-am4"/>
-                            <constraint firstItem="xEs-aJ-tOP" firstAttribute="leading" secondItem="3ia-My-u8E" secondAttribute="leading" id="h1r-Db-0XY"/>
                             <constraint firstAttribute="trailingMargin" secondItem="ywk-PI-VI0" secondAttribute="trailing" constant="11" id="mVg-nb-Whj"/>
-                            <constraint firstItem="1Jh-w0-LeE" firstAttribute="top" secondItem="xEs-aJ-tOP" secondAttribute="bottom" id="uNr-0N-T5f"/>
+                            <constraint firstAttribute="trailing" secondItem="xEs-aJ-tOP" secondAttribute="trailing" id="mf3-3B-Ghk"/>
+                            <constraint firstAttribute="trailing" secondItem="ju2-UO-tFL" secondAttribute="trailing" id="u2T-8b-cUz"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -247,6 +315,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="ic_sport_camera" width="27" height="27"/>
+        <image name="ic_sport_continue" width="100" height="100"/>
+        <image name="ic_sport_finish" width="100" height="100"/>
         <image name="ic_sport_gps_disconnect" width="56" height="23"/>
         <image name="ic_sport_gps_map_close" width="43" height="43"/>
         <image name="ic_sport_gps_map_disconnect" width="56" height="23"/>
@@ -254,6 +325,9 @@
         <image name="ic_sport_gps_map_mixmode" width="80" height="89"/>
         <image name="ic_sport_gps_map_mode" width="43" height="43"/>
         <image name="ic_sport_gps_map_realmode" width="80" height="89"/>
+        <image name="ic_sport_lock_1" width="38" height="27"/>
         <image name="ic_sport_map" width="30" height="30"/>
+        <image name="ic_sport_pause" width="100" height="100"/>
+        <image name="ic_sport_settings" width="27" height="27"/>
     </resources>
 </document>

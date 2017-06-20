@@ -29,12 +29,12 @@
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IBm-G0-Dcp">
                                         <fontDescription key="fontDescription" name="DINCond-Bold" family="DINCond-Bold" pointSize="90"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="距离" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qrb-wV-ive">
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" red="0.54509803921568623" green="0.61960784313725492" blue="0.66666666666666663" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="txN-ub-jQZ">
@@ -44,21 +44,21 @@
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="时长" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hbd-rd-QkU">
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" red="0.5450980392" green="0.61960784310000006" blue="0.66666666669999997" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="平均速度(公里／小时)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oWF-lX-abK">
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" red="0.5450980392" green="0.61960784310000006" blue="0.66666666669999997" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dfG-qs-GeX">
                                         <fontDescription key="fontDescription" name="DINCond-Bold" family="DINCond-Bold" pointSize="28"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="oWF-lX-abK" firstAttribute="centerY" secondItem="Hbd-rd-QkU" secondAttribute="centerY" id="3eQ-8H-7Xs"/>
                                     <constraint firstItem="Hbd-rd-QkU" firstAttribute="top" secondItem="txN-ub-jQZ" secondAttribute="bottom" id="5lQ-0R-fpz"/>
@@ -76,22 +76,25 @@
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xEs-aJ-tOP" userLabel="控制面板">
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gwS-uo-6Kq" userLabel="暂停">
-                                        <state key="normal" image="ic_sport_pause"/>
+                                    <button opaque="NO" clipsSubviews="YES" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UOS-M5-6i8" userLabel="结束">
+                                        <color key="backgroundColor" red="0.73333333333333328" green="0.38823529411764707" blue="0.29411764705882354" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" image="ic_sport_finish"/>
                                         <connections>
-                                            <action selector="changeSportState:" destination="2yc-em-bVo" eventType="touchUpInside" id="rHg-l2-E3R"/>
+                                            <action selector="changeSportState:" destination="2yc-em-bVo" eventType="touchUpInside" id="2dG-Cb-2cA"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M8L-Ht-QCb" userLabel="继续">
+                                        <color key="backgroundColor" red="0.18039215689999999" green="0.89411764709999997" blue="0.29803921570000003" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" image="ic_sport_continue"/>
                                         <connections>
                                             <action selector="changeSportState:" destination="2yc-em-bVo" eventType="touchUpInside" id="Si3-V2-Ok2"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UOS-M5-6i8" userLabel="结束">
-                                        <state key="normal" image="ic_sport_finish"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gwS-uo-6Kq" userLabel="暂停">
+                                        <color key="backgroundColor" red="0.18039215689999999" green="0.89411764709999997" blue="0.29803921570000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" image="ic_sport_pause"/>
                                         <connections>
-                                            <action selector="changeSportState:" destination="2yc-em-bVo" eventType="touchUpInside" id="2dG-Cb-2cA"/>
+                                            <action selector="changeSportState:" destination="2yc-em-bVo" eventType="touchUpInside" id="rHg-l2-E3R"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fOy-mK-x7B">
@@ -104,20 +107,20 @@
                                         <state key="normal" image="ic_sport_settings"/>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="Ll3-ZI-3KK" firstAttribute="centerX" secondItem="xEs-aJ-tOP" secondAttribute="centerX" id="20Q-bw-xXc"/>
                                     <constraint firstItem="Ll3-ZI-3KK" firstAttribute="centerY" secondItem="fOy-mK-x7B" secondAttribute="centerY" id="5S5-XC-1Oz"/>
                                     <constraint firstItem="gwS-uo-6Kq" firstAttribute="centerY" secondItem="M8L-Ht-QCb" secondAttribute="centerY" id="8oz-MB-DzO"/>
                                     <constraint firstAttribute="trailing" secondItem="GJ8-ze-S06" secondAttribute="trailing" constant="12" id="Hga-ux-adt"/>
-                                    <constraint firstItem="UOS-M5-6i8" firstAttribute="centerX" secondItem="gwS-uo-6Kq" secondAttribute="centerX" id="MA3-8a-dkp"/>
                                     <constraint firstItem="gwS-uo-6Kq" firstAttribute="centerX" secondItem="xEs-aJ-tOP" secondAttribute="centerX" id="QdK-ft-nqS"/>
                                     <constraint firstItem="GJ8-ze-S06" firstAttribute="centerY" secondItem="fOy-mK-x7B" secondAttribute="centerY" id="RmY-7D-mrv"/>
                                     <constraint firstItem="UOS-M5-6i8" firstAttribute="centerY" secondItem="gwS-uo-6Kq" secondAttribute="centerY" id="aRy-Hs-SLa"/>
+                                    <constraint firstItem="UOS-M5-6i8" firstAttribute="centerX" secondItem="xEs-aJ-tOP" secondAttribute="centerX" id="eWj-oT-YRx"/>
                                     <constraint firstItem="gwS-uo-6Kq" firstAttribute="centerY" secondItem="xEs-aJ-tOP" secondAttribute="centerY" multiplier="0.8" id="f4w-wa-qNX"/>
                                     <constraint firstAttribute="bottom" secondItem="fOy-mK-x7B" secondAttribute="bottom" constant="12" id="hpG-4k-tXF"/>
-                                    <constraint firstItem="gwS-uo-6Kq" firstAttribute="centerX" secondItem="M8L-Ht-QCb" secondAttribute="centerX" id="mxz-EO-LVP"/>
                                     <constraint firstItem="fOy-mK-x7B" firstAttribute="leading" secondItem="xEs-aJ-tOP" secondAttribute="leading" constant="12" id="vBk-jz-PaW"/>
+                                    <constraint firstItem="M8L-Ht-QCb" firstAttribute="centerX" secondItem="xEs-aJ-tOP" secondAttribute="centerX" id="wWL-74-Jyw"/>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ywk-PI-VI0">
@@ -159,6 +162,17 @@
                             <constraint firstAttribute="trailing" secondItem="ju2-UO-tFL" secondAttribute="trailing" id="u2T-8b-cUz"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="continueButton" destination="M8L-Ht-QCb" id="exn-7k-eqi"/>
+                        <outlet property="continueButtonCenterXCons" destination="wWL-74-Jyw" id="zJb-iI-Zom"/>
+                        <outlet property="controlPanelView" destination="xEs-aJ-tOP" id="WO7-XO-nDf"/>
+                        <outlet property="distanceLabel" destination="IBm-G0-Dcp" id="R8Y-k9-mdm"/>
+                        <outlet property="finishButtonCenterXCons" destination="eWj-oT-YRx" id="Vll-Q7-8O2"/>
+                        <outlet property="pauseButton" destination="gwS-uo-6Kq" id="Fax-j7-9JW"/>
+                        <outlet property="pauseButtonCenterXCons" destination="QdK-ft-nqS" id="0xI-l6-jeQ"/>
+                        <outlet property="speedLabel" destination="dfG-qs-GeX" id="shA-Eu-jzo"/>
+                        <outlet property="timeLabel" destination="txN-ub-jQZ" id="Ymp-09-2IJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gxi-OG-k3c" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

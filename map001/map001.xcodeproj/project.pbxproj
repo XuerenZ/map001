@@ -13,6 +13,7 @@
 		D87555A61EEF3641007D31B7 /* XRCircleAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = D87555A51EEF3641007D31B7 /* XRCircleAnimator.m */; };
 		D8758E181EF097500089669C /* DINCond-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = D8758E171EF097500089669C /* DINCond-Bold.otf */; };
 		D8758E1B1EF0A14E0089669C /* XRSportGPSSingalBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = D8758E1A1EF0A14E0089669C /* XRSportGPSSingalBtn.m */; };
+		D87F5D0B1EF9D77B002AF419 /* UIColor+CZAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = D87F5D0A1EF9D77B002AF419 /* UIColor+CZAddition.m */; };
 		D898D8A41ED4F61700222AFF /* XRSportPolyline.m in Sources */ = {isa = PBXBuildFile; fileRef = D898D8A31ED4F61700222AFF /* XRSportPolyline.m */; };
 		D898D8A71ED5010F00222AFF /* XRSportTrackingLine.m in Sources */ = {isa = PBXBuildFile; fileRef = D898D8A61ED5010F00222AFF /* XRSportTrackingLine.m */; };
 		D8DFF4ED1ECE501E000921CD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D8DFF4EC1ECE501E000921CD /* main.m */; };
@@ -39,6 +40,9 @@
 		D8758E171EF097500089669C /* DINCond-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DINCond-Bold.otf"; sourceTree = "<group>"; };
 		D8758E191EF0A14E0089669C /* XRSportGPSSingalBtn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XRSportGPSSingalBtn.h; sourceTree = "<group>"; };
 		D8758E1A1EF0A14E0089669C /* XRSportGPSSingalBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XRSportGPSSingalBtn.m; sourceTree = "<group>"; };
+		D87F5D081EF9D77B002AF419 /* CZAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CZAdditions.h; sourceTree = "<group>"; };
+		D87F5D091EF9D77B002AF419 /* UIColor+CZAddition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+CZAddition.h"; sourceTree = "<group>"; };
+		D87F5D0A1EF9D77B002AF419 /* UIColor+CZAddition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+CZAddition.m"; sourceTree = "<group>"; };
 		D898D8A21ED4F61700222AFF /* XRSportPolyline.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XRSportPolyline.h; sourceTree = "<group>"; };
 		D898D8A31ED4F61700222AFF /* XRSportPolyline.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XRSportPolyline.m; sourceTree = "<group>"; };
 		D898D8A51ED5010F00222AFF /* XRSportTrackingLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XRSportTrackingLine.h; sourceTree = "<group>"; };
@@ -121,6 +125,24 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		D87F5D061EF9D771002AF419 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				D87F5D071EF9D77B002AF419 /* Additions */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		D87F5D071EF9D77B002AF419 /* Additions */ = {
+			isa = PBXGroup;
+			children = (
+				D87F5D081EF9D77B002AF419 /* CZAdditions.h */,
+				D87F5D091EF9D77B002AF419 /* UIColor+CZAddition.h */,
+				D87F5D0A1EF9D77B002AF419 /* UIColor+CZAddition.m */,
+			);
+			path = Additions;
+			sourceTree = "<group>";
+		};
 		D8DFF4DF1ECE501E000921CD = {
 			isa = PBXGroup;
 			children = (
@@ -142,6 +164,7 @@
 		D8DFF4EA1ECE501E000921CD /* map001 */ = {
 			isa = PBXGroup;
 			children = (
+				D87F5D061EF9D771002AF419 /* Tools */,
 				D8E42F311ED24CAF009D61F3 /* Sport */,
 				D8DFF4EE1ECE501E000921CD /* AppDelegate.h */,
 				D8DFF4EF1ECE501E000921CD /* AppDelegate.m */,
@@ -335,6 +358,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D87F5D0B1EF9D77B002AF419 /* UIColor+CZAddition.m in Sources */,
 				D87555A61EEF3641007D31B7 /* XRCircleAnimator.m in Sources */,
 				D8DFF4F31ECE501E000921CD /* ViewController.m in Sources */,
 				D898D8A41ED4F61700222AFF /* XRSportPolyline.m in Sources */,

@@ -134,6 +134,9 @@
     if (_sportTracking.sportState != XRSportStateContinue) {
         return;
     }
+    // 1. 将用户位置设置在地图视图的中心点
+    [mapView setCenterCoordinate:userLocation.coordinate animated:YES];
+
     // 大概 1s 更新一次！
     NSLog(@"%@ %p", userLocation.location, userLocation.location);
     
@@ -153,6 +156,9 @@
     // 绘制轨迹模型
     [mapView addOverlay:[_sportTracking appendLocation:userLocation.location]];
     [self updateUIDisplay];
+    
+    // 5. 通知代理数据更新
+    [_delegate sportMapViewControllerDidChangedData:self];
 }
 /**
  更新 UI 显示

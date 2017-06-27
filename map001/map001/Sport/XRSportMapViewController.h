@@ -8,7 +8,23 @@
 
 #import "ViewController.h"
 #import "XRSportTracking.h"
+@class XRSportMapViewController;
+@protocol XRSportMapViewControllerDelegate <NSObject>
+/**
+ 运动地图控制器数据变化
+ 
+ @param vc 运动地图控制器
+ */
+- (void)sportMapViewControllerDidChangedData:(XRSportMapViewController *)vc;
+
+@end
+
 @interface XRSportMapViewController : UIViewController
+
+/**
+ 代理
+ */
+@property (nonatomic, weak) id <XRSportMapViewControllerDelegate> delegate;
 /**
  本次运动轨迹追踪模型
  */

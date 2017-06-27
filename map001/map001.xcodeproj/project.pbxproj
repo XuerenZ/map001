@@ -14,6 +14,11 @@
 		D8758E181EF097500089669C /* DINCond-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = D8758E171EF097500089669C /* DINCond-Bold.otf */; };
 		D8758E1B1EF0A14E0089669C /* XRSportGPSSingalBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = D8758E1A1EF0A14E0089669C /* XRSportGPSSingalBtn.m */; };
 		D87F5D0B1EF9D77B002AF419 /* UIColor+CZAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = D87F5D0A1EF9D77B002AF419 /* UIColor+CZAddition.m */; };
+		D87F5D111EF9DDFD002AF419 /* XRSportSpeaker.m in Sources */ = {isa = PBXBuildFile; fileRef = D87F5D101EF9DDFD002AF419 /* XRSportSpeaker.m */; };
+		D87F5D151EF9E75B002AF419 /* voice.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D87F5D141EF9E75B002AF419 /* voice.bundle */; };
+		D8878EA91EFB2EB700BAC8F3 /* NSString+HMNumberConvert.m in Sources */ = {isa = PBXBuildFile; fileRef = D8878EA81EFB2EB700BAC8F3 /* NSString+HMNumberConvert.m */; };
+		D88987151F02E6F00081F192 /* XRSportCameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D88987141F02E6F00081F192 /* XRSportCameraViewController.m */; };
+		D88987181F02ECFA0081F192 /* XRSportCameraViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D88987171F02ECFA0081F192 /* XRSportCameraViewController.xib */; };
 		D898D8A41ED4F61700222AFF /* XRSportPolyline.m in Sources */ = {isa = PBXBuildFile; fileRef = D898D8A31ED4F61700222AFF /* XRSportPolyline.m */; };
 		D898D8A71ED5010F00222AFF /* XRSportTrackingLine.m in Sources */ = {isa = PBXBuildFile; fileRef = D898D8A61ED5010F00222AFF /* XRSportTrackingLine.m */; };
 		D8DFF4ED1ECE501E000921CD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D8DFF4EC1ECE501E000921CD /* main.m */; };
@@ -43,6 +48,14 @@
 		D87F5D081EF9D77B002AF419 /* CZAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CZAdditions.h; sourceTree = "<group>"; };
 		D87F5D091EF9D77B002AF419 /* UIColor+CZAddition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+CZAddition.h"; sourceTree = "<group>"; };
 		D87F5D0A1EF9D77B002AF419 /* UIColor+CZAddition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+CZAddition.m"; sourceTree = "<group>"; };
+		D87F5D0F1EF9DDFD002AF419 /* XRSportSpeaker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XRSportSpeaker.h; sourceTree = "<group>"; };
+		D87F5D101EF9DDFD002AF419 /* XRSportSpeaker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XRSportSpeaker.m; sourceTree = "<group>"; };
+		D87F5D141EF9E75B002AF419 /* voice.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = voice.bundle; sourceTree = "<group>"; };
+		D8878EA71EFB2EB700BAC8F3 /* NSString+HMNumberConvert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+HMNumberConvert.h"; sourceTree = "<group>"; };
+		D8878EA81EFB2EB700BAC8F3 /* NSString+HMNumberConvert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+HMNumberConvert.m"; sourceTree = "<group>"; };
+		D88987131F02E6F00081F192 /* XRSportCameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XRSportCameraViewController.h; sourceTree = "<group>"; };
+		D88987141F02E6F00081F192 /* XRSportCameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XRSportCameraViewController.m; sourceTree = "<group>"; };
+		D88987171F02ECFA0081F192 /* XRSportCameraViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XRSportCameraViewController.xib; sourceTree = "<group>"; };
 		D898D8A21ED4F61700222AFF /* XRSportPolyline.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XRSportPolyline.h; sourceTree = "<group>"; };
 		D898D8A31ED4F61700222AFF /* XRSportPolyline.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XRSportPolyline.m; sourceTree = "<group>"; };
 		D898D8A51ED5010F00222AFF /* XRSportTrackingLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XRSportTrackingLine.h; sourceTree = "<group>"; };
@@ -139,8 +152,29 @@
 				D87F5D081EF9D77B002AF419 /* CZAdditions.h */,
 				D87F5D091EF9D77B002AF419 /* UIColor+CZAddition.h */,
 				D87F5D0A1EF9D77B002AF419 /* UIColor+CZAddition.m */,
+				D8878EA71EFB2EB700BAC8F3 /* NSString+HMNumberConvert.h */,
+				D8878EA81EFB2EB700BAC8F3 /* NSString+HMNumberConvert.m */,
 			);
 			path = Additions;
+			sourceTree = "<group>";
+		};
+		D87F5D131EF9DE1B002AF419 /* 语音播报 */ = {
+			isa = PBXGroup;
+			children = (
+				D87F5D0F1EF9DDFD002AF419 /* XRSportSpeaker.h */,
+				D87F5D101EF9DDFD002AF419 /* XRSportSpeaker.m */,
+			);
+			name = "语音播报";
+			sourceTree = "<group>";
+		};
+		D88987161F02E7510081F192 /* 相机＋分享 */ = {
+			isa = PBXGroup;
+			children = (
+				D88987131F02E6F00081F192 /* XRSportCameraViewController.h */,
+				D88987141F02E6F00081F192 /* XRSportCameraViewController.m */,
+				D88987171F02ECFA0081F192 /* XRSportCameraViewController.xib */,
+			);
+			name = "相机＋分享";
 			sourceTree = "<group>";
 		};
 		D8DFF4DF1ECE501E000921CD = {
@@ -183,6 +217,7 @@
 		D8DFF4EB1ECE501E000921CD /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				D87F5D141EF9E75B002AF419 /* voice.bundle */,
 				D8758E161EF097500089669C /* Fonts */,
 				D8DFF4EC1ECE501E000921CD /* main.m */,
 			);
@@ -196,6 +231,7 @@
 				D87363841ED7946D00AAE527 /* Views */,
 				D8E42F351ED24D2A009D61F3 /* Controller */,
 				D8E42F3F1ED24DB4009D61F3 /* Model */,
+				D88987161F02E7510081F192 /* 相机＋分享 */,
 			);
 			path = Sport;
 			sourceTree = "<group>";
@@ -224,6 +260,7 @@
 				D898D8A31ED4F61700222AFF /* XRSportPolyline.m */,
 				D898D8A51ED5010F00222AFF /* XRSportTrackingLine.h */,
 				D898D8A61ED5010F00222AFF /* XRSportTrackingLine.m */,
+				D87F5D131EF9DE1B002AF419 /* 语音播报 */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -297,7 +334,9 @@
 			files = (
 				D87363861ED794AB00AAE527 /* XRSportSporting.storyboard in Resources */,
 				D8DFF4FE1ECE501E000921CD /* LaunchScreen.storyboard in Resources */,
+				D87F5D151EF9E75B002AF419 /* voice.bundle in Resources */,
 				D8DFF4FB1ECE501E000921CD /* Assets.xcassets in Resources */,
+				D88987181F02ECFA0081F192 /* XRSportCameraViewController.xib in Resources */,
 				D8758E181EF097500089669C /* DINCond-Bold.otf in Resources */,
 				D8DFF4F61ECE501E000921CD /* Main.storyboard in Resources */,
 			);
@@ -360,15 +399,18 @@
 			files = (
 				D87F5D0B1EF9D77B002AF419 /* UIColor+CZAddition.m in Sources */,
 				D87555A61EEF3641007D31B7 /* XRCircleAnimator.m in Sources */,
+				D87F5D111EF9DDFD002AF419 /* XRSportSpeaker.m in Sources */,
 				D8DFF4F31ECE501E000921CD /* ViewController.m in Sources */,
 				D898D8A41ED4F61700222AFF /* XRSportPolyline.m in Sources */,
 				D87555A21EEF326C007D31B7 /* XRSportMapModelViewController.m in Sources */,
 				D8E42F3E1ED24DAD009D61F3 /* XRSportTracking.m in Sources */,
+				D8878EA91EFB2EB700BAC8F3 /* NSString+HMNumberConvert.m in Sources */,
 				D8DFF4F01ECE501E000921CD /* AppDelegate.m in Sources */,
 				D8DFF4F91ECE501E000921CD /* map001.xcdatamodeld in Sources */,
 				D8E42F381ED24D68009D61F3 /* XRSportSportingViewController.m in Sources */,
 				D8E42F341ED24D21009D61F3 /* XRSportMainViewController.m in Sources */,
 				D898D8A71ED5010F00222AFF /* XRSportTrackingLine.m in Sources */,
+				D88987151F02E6F00081F192 /* XRSportCameraViewController.m in Sources */,
 				D8758E1B1EF0A14E0089669C /* XRSportGPSSingalBtn.m in Sources */,
 				D8E42F3B1ED24D74009D61F3 /* XRSportMapViewController.m in Sources */,
 				D8DFF4ED1ECE501E000921CD /* main.m in Sources */,

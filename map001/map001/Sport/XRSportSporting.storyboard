@@ -99,6 +99,9 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fOy-mK-x7B">
                                         <state key="normal" image="ic_sport_camera"/>
+                                        <connections>
+                                            <action selector="showCameraViewController" destination="2yc-em-bVo" eventType="touchUpInside" id="joj-IB-cfx"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ll3-ZI-3KK">
                                         <state key="normal" image="ic_sport_lock_1"/>

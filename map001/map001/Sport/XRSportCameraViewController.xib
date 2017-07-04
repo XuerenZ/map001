@@ -15,8 +15,12 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="XRSportCameraViewController">
             <connections>
+                <outlet property="distanceLabel" destination="Wt8-OO-9eQ" id="uhG-sj-Tm0"/>
                 <outlet property="previewView" destination="IMU-F4-lmb" id="YX8-qW-T3H"/>
                 <outlet property="view" destination="iN0-l3-epB" id="RYd-KH-fgP"/>
+                <outlet property="waterprintImageView" destination="31C-Dj-4Ep" id="Dsb-yd-9JH"/>
+                <outletCollection property="maskViewConstraints" destination="qUu-Cp-OJB" id="IhJ-st-1Ry"/>
+                <outletCollection property="maskViewConstraints" destination="9uq-iT-jwL" id="2l5-dr-abs"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -32,41 +36,51 @@
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nb0-bn-Iff" userLabel="左侧">
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nb0-bn-Iff" userLabel="左侧" customClass="XRSportCameraMaskView">
                             <subviews>
-                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_shutter_center_left" translatesAutoresizingMaskIntoConstraints="NO" id="rwT-Pe-Bzf"/>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_shutter_center_left" translatesAutoresizingMaskIntoConstraints="NO" id="R81-Ah-SXc">
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </imageView>
                             </subviews>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             <constraints>
-                                <constraint firstItem="rwT-Pe-Bzf" firstAttribute="centerY" secondItem="Nb0-bn-Iff" secondAttribute="centerY" id="91L-7x-5p9"/>
-                                <constraint firstItem="rwT-Pe-Bzf" firstAttribute="centerX" secondItem="Nb0-bn-Iff" secondAttribute="trailing" id="Hfk-9O-Mr6"/>
+                                <constraint firstItem="R81-Ah-SXc" firstAttribute="centerX" secondItem="Nb0-bn-Iff" secondAttribute="trailing" id="F3s-fm-RMg"/>
+                                <constraint firstItem="R81-Ah-SXc" firstAttribute="centerY" secondItem="Nb0-bn-Iff" secondAttribute="centerY" id="ORv-jg-32w"/>
                             </constraints>
+                            <connections>
+                                <outlet property="imageView" destination="R81-Ah-SXc" id="cE9-nM-MKe"/>
+                            </connections>
                         </view>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZbI-cO-jG3" userLabel="右侧">
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZbI-cO-jG3" userLabel="右侧" customClass="XRSportCameraMaskView">
                             <subviews>
-                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_shutter_center_right" translatesAutoresizingMaskIntoConstraints="NO" id="oGB-ZY-ySn"/>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_shutter_center_right" translatesAutoresizingMaskIntoConstraints="NO" id="oGB-ZY-ySn">
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </imageView>
                             </subviews>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             <constraints>
                                 <constraint firstItem="oGB-ZY-ySn" firstAttribute="centerY" secondItem="ZbI-cO-jG3" secondAttribute="centerY" id="7ia-BU-KEz"/>
                                 <constraint firstItem="oGB-ZY-ySn" firstAttribute="centerX" secondItem="ZbI-cO-jG3" secondAttribute="leading" id="Ssn-nL-qad"/>
                             </constraints>
+                            <connections>
+                                <outlet property="imageView" destination="oGB-ZY-ySn" id="U4M-gU-fpp"/>
+                            </connections>
                         </view>
                     </subviews>
                     <color key="backgroundColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="bottom" secondItem="Wt8-OO-9eQ" secondAttribute="bottom" constant="32" id="0g7-2t-gYs"/>
                         <constraint firstItem="Nb0-bn-Iff" firstAttribute="leading" secondItem="IMU-F4-lmb" secondAttribute="leading" priority="999" id="20Q-WV-PY5"/>
-                        <constraint firstItem="ZbI-cO-jG3" firstAttribute="leading" secondItem="IMU-F4-lmb" secondAttribute="trailing" constant="52" id="2tf-74-Uoc"/>
-                        <constraint firstItem="ZbI-cO-jG3" firstAttribute="width" secondItem="IMU-F4-lmb" secondAttribute="width" multiplier="0.5" id="8LZ-xx-L3i"/>
-                        <constraint firstAttribute="trailing" secondItem="ZbI-cO-jG3" secondAttribute="trailing" priority="999" id="9EJ-HA-NWy"/>
+                        <constraint firstItem="ZbI-cO-jG3" firstAttribute="width" secondItem="IMU-F4-lmb" secondAttribute="width" multiplier="0.5" id="584-4b-Uvc"/>
+                        <constraint firstAttribute="trailing" secondItem="ZbI-cO-jG3" secondAttribute="leading" constant="-52" id="9uq-iT-jwL"/>
+                        <constraint firstAttribute="bottom" secondItem="ZbI-cO-jG3" secondAttribute="bottom" id="Ad3-f6-sIe"/>
+                        <constraint firstItem="ZbI-cO-jG3" firstAttribute="top" secondItem="IMU-F4-lmb" secondAttribute="top" id="Dxd-9W-1Cm"/>
                         <constraint firstAttribute="bottom" secondItem="Nb0-bn-Iff" secondAttribute="bottom" id="Ual-Of-Igj"/>
                         <constraint firstItem="Wt8-OO-9eQ" firstAttribute="top" secondItem="31C-Dj-4Ep" secondAttribute="bottom" constant="16" id="bme-cE-Rvp"/>
                         <constraint firstItem="Nb0-bn-Iff" firstAttribute="top" secondItem="IMU-F4-lmb" secondAttribute="top" id="ejH-kX-JQg"/>
                         <constraint firstItem="Nb0-bn-Iff" firstAttribute="width" secondItem="IMU-F4-lmb" secondAttribute="width" multiplier="0.5" id="fTA-g4-lo0"/>
                         <constraint firstItem="31C-Dj-4Ep" firstAttribute="centerX" secondItem="IMU-F4-lmb" secondAttribute="centerX" id="gey-Tt-yAg"/>
-                        <constraint firstAttribute="bottom" secondItem="ZbI-cO-jG3" secondAttribute="bottom" id="lEr-xJ-iK4"/>
-                        <constraint firstItem="ZbI-cO-jG3" firstAttribute="top" secondItem="IMU-F4-lmb" secondAttribute="top" id="nd2-BB-CTE"/>
+                        <constraint firstAttribute="trailing" secondItem="ZbI-cO-jG3" secondAttribute="trailing" priority="999" id="k8B-IQ-W7p"/>
                         <constraint firstItem="Wt8-OO-9eQ" firstAttribute="centerX" secondItem="IMU-F4-lmb" secondAttribute="centerX" id="pha-9c-2UF"/>
                         <constraint firstAttribute="leading" secondItem="Nb0-bn-Iff" secondAttribute="trailing" constant="52" id="qUu-Cp-OJB"/>
                     </constraints>
@@ -77,6 +91,9 @@
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lvf-lC-7Cy">
                     <fontDescription key="fontDescription" type="system" pointSize="48"/>
                     <state key="normal" title="✓" backgroundImage="ic_waterprint_shutter"/>
+                    <connections>
+                        <action selector="capture" destination="-1" eventType="touchUpInside" id="qpg-rk-ZzD"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T6i-Gx-Rb7" userLabel="shared">
                     <state key="normal" image="ic_waterprint_share"/>
@@ -85,7 +102,7 @@
                     <state key="normal" image="ic_waterprint_revolve"/>
                 </button>
             </subviews>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="Lvf-lC-7Cy" secondAttribute="bottom" constant="32" id="2ZZ-4C-pp1"/>
                 <constraint firstItem="IMU-F4-lmb" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="FhB-2U-C1a"/>
@@ -94,6 +111,7 @@
                 <constraint firstItem="T6i-Gx-Rb7" firstAttribute="centerY" secondItem="Lvf-lC-7Cy" secondAttribute="centerY" id="MYl-AM-INc"/>
                 <constraint firstItem="Lvf-lC-7Cy" firstAttribute="centerY" secondItem="PMI-wI-eXm" secondAttribute="centerY" id="NRx-l5-3Gs"/>
                 <constraint firstAttribute="bottom" secondItem="IMU-F4-lmb" secondAttribute="bottom" constant="130" id="OI2-ZJ-y3E"/>
+                <constraint firstAttribute="trailing" secondItem="IMU-F4-lmb" secondAttribute="trailing" id="RCu-UK-ukj"/>
                 <constraint firstAttribute="trailing" secondItem="T6i-Gx-Rb7" secondAttribute="trailing" constant="16" id="Sjq-9w-mD4"/>
                 <constraint firstItem="IMU-F4-lmb" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Zjn-MJ-inN"/>
                 <constraint firstItem="PMI-wI-eXm" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="aHN-Xe-WH4"/>

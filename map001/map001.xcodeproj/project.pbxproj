@@ -21,6 +21,7 @@
 		D88987181F02ECFA0081F192 /* XRSportCameraViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D88987171F02ECFA0081F192 /* XRSportCameraViewController.xib */; };
 		D898D8A41ED4F61700222AFF /* XRSportPolyline.m in Sources */ = {isa = PBXBuildFile; fileRef = D898D8A31ED4F61700222AFF /* XRSportPolyline.m */; };
 		D898D8A71ED5010F00222AFF /* XRSportTrackingLine.m in Sources */ = {isa = PBXBuildFile; fileRef = D898D8A61ED5010F00222AFF /* XRSportTrackingLine.m */; };
+		D8B20EFD1F0C58DB00555CD0 /* XRSportCameraMaskView.m in Sources */ = {isa = PBXBuildFile; fileRef = D8B20EFC1F0C58DB00555CD0 /* XRSportCameraMaskView.m */; };
 		D8DFF4ED1ECE501E000921CD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D8DFF4EC1ECE501E000921CD /* main.m */; };
 		D8DFF4F01ECE501E000921CD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D8DFF4EF1ECE501E000921CD /* AppDelegate.m */; };
 		D8DFF4F31ECE501E000921CD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8DFF4F21ECE501E000921CD /* ViewController.m */; };
@@ -60,6 +61,8 @@
 		D898D8A31ED4F61700222AFF /* XRSportPolyline.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XRSportPolyline.m; sourceTree = "<group>"; };
 		D898D8A51ED5010F00222AFF /* XRSportTrackingLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XRSportTrackingLine.h; sourceTree = "<group>"; };
 		D898D8A61ED5010F00222AFF /* XRSportTrackingLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XRSportTrackingLine.m; sourceTree = "<group>"; };
+		D8B20EFB1F0C58DB00555CD0 /* XRSportCameraMaskView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XRSportCameraMaskView.h; sourceTree = "<group>"; };
+		D8B20EFC1F0C58DB00555CD0 /* XRSportCameraMaskView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XRSportCameraMaskView.m; sourceTree = "<group>"; };
 		D8DFF4E81ECE501E000921CD /* map001.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = map001.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8DFF4EC1ECE501E000921CD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D8DFF4EE1ECE501E000921CD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -173,6 +176,8 @@
 				D88987131F02E6F00081F192 /* XRSportCameraViewController.h */,
 				D88987141F02E6F00081F192 /* XRSportCameraViewController.m */,
 				D88987171F02ECFA0081F192 /* XRSportCameraViewController.xib */,
+				D8B20EFB1F0C58DB00555CD0 /* XRSportCameraMaskView.h */,
+				D8B20EFC1F0C58DB00555CD0 /* XRSportCameraMaskView.m */,
 			);
 			name = "相机＋分享";
 			sourceTree = "<group>";
@@ -407,6 +412,7 @@
 				D8878EA91EFB2EB700BAC8F3 /* NSString+HMNumberConvert.m in Sources */,
 				D8DFF4F01ECE501E000921CD /* AppDelegate.m in Sources */,
 				D8DFF4F91ECE501E000921CD /* map001.xcdatamodeld in Sources */,
+				D8B20EFD1F0C58DB00555CD0 /* XRSportCameraMaskView.m in Sources */,
 				D8E42F381ED24D68009D61F3 /* XRSportSportingViewController.m in Sources */,
 				D8E42F341ED24D21009D61F3 /* XRSportMainViewController.m in Sources */,
 				D898D8A71ED5010F00222AFF /* XRSportTrackingLine.m in Sources */,

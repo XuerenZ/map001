@@ -35,7 +35,7 @@
     /// 输入设备 - 摄像头
     AVCaptureDeviceInput *_inputDevice;
     /// 图像输出
-    AVCapturePhotoOutput *_imageOutput;
+    AVCaptureStillImageOutput *_imageOutput;
     /// 取景框 - 预览图层
     AVCaptureVideoPreviewLayer *_previewLayer;
 }
@@ -45,6 +45,117 @@
     // Do any additional setup after loading the view.
     // 设置拍摄会话
     [self setupCaptureSession];
+}
+#pragma mark - 监听方法
+/**
+ 拍照
+ */
+- (IBAction)capture {
+    // 关闭快门
+    [self maskViewAminWithClose:YES];
+    
+    // 拍照和保存
+    [self capturePicture];
+    
+    // 打开快门
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [self maskViewAminWithClose:NO];
+    });
+}
+
+/**
+ 快门动画
+ 
+ @param close 是否关闭快门
+ */
+- (void)maskViewAminWithClose:(BOOL)close {
+    
+    if (close) {
+        // 禁用选中的约束
+        [NSLayoutConstraint deactivateConstraints:_maskViewConstraints];
+    } else {
+        // 启用选中的约束
+        [NSLayoutConstraint activateConstraints:_maskViewConstraints];
+    }
+    
+    [UIView animateWithDuration:2 animations:^{
+        [self.view layoutIfNeeded];
+    }];
+    
+}
+
+/**
+ 拍照和保存
+ */
+- (void)capturePicture {
+    
+    // AVCaptureConnection 表示图像和摄像头的连接
+    AVCaptureConnection *conn = _imageOutput.connections.firstObject;
+    
+    if (conn == nil) {
+        NSLog(@"无法连接到摄像头");
+        
+        return;
+    }
+    
+    // 拍摄照片
+    [_imageOutput captureStillImageAsynchronouslyFromConnection:conn completionHandler:^(CMSampleBufferRef imageDataSampleBuffer, NSError *error) {
+        
+        // 判断是否有图像数据的采样缓冲区
+        if (imageDataSampleBuffer == nil) {
+            NSLog(@"没有图像数据采样缓冲区");
+            
+            return;
+        }
+        
+        // 使用图像数据采样缓冲区生成照片的数据
+        NSData *data = [AVCaptureStillImageOutput jpegStillImageNSDataRepresentation:imageDataSampleBuffer];
+        
+        // 使用数据生成图像 - 几乎可以显示在一个完整的视图中
+        UIImage *image = [UIImage imageWithData:data];
+        
+        // 将图像的上下两部分不显示在预览图层中的内容裁切掉！
+        // 1> 预览视图的大小
+        CGRect rect = self.previewView.bounds;
+        
+        // 2> 计算裁切掉的大小
+        CGFloat offset = (self.view.bounds.size.height - rect.size.height) * 0.5;
+        
+        // 3> 利用图像上下文来裁切图像
+        UIGraphicsBeginImageContextWithOptions(rect.size, YES, 0);
+        
+        // 4> 绘制图像
+        [image drawInRect:CGRectInset(rect, 0, -offset)];
+        
+        // 水印图像
+        [self.waterprintImageView.image drawInRect:self.waterprintImageView.frame];
+        
+        // 距离标签
+        [self.distanceLabel.attributedText drawInRect:self.distanceLabel.frame];
+        
+        // 5> 从图像上下文获取绘制结果
+        UIImage *result = UIGraphicsGetImageFromCurrentImageContext();
+        
+        // 6> 关闭上下文
+        UIGraphicsEndImageContext();
+        
+        // 保存图像
+        UIImageWriteToSavedPhotosAlbum(result, self, @selector(image:didFinishSavingWithError:contextInfo:), NULL);
+    }];
+}
+
+/**
+ 保存相片结束的回调方法
+ 
+ @param image       图像
+ @param error       错误
+ @param contextInfo 上下文
+ */
+- (void)image:(UIImage *)image didFinishSavingWithError:(NSError *)error contextInfo:(void *)contextInfo {
+    
+    NSString *msg = (error == nil) ? @"照片保存成功" : @"照片保存失败";
+    
+    NSLog(@"%@", msg);
 }
 
 /**

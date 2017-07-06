@@ -173,13 +173,29 @@
 		D88987161F02E7510081F192 /* 相机＋分享 */ = {
 			isa = PBXGroup;
 			children = (
-				D88987131F02E6F00081F192 /* XRSportCameraViewController.h */,
-				D88987141F02E6F00081F192 /* XRSportCameraViewController.m */,
-				D88987171F02ECFA0081F192 /* XRSportCameraViewController.xib */,
+				D8A621661F0DA45200BE1F2F /* Controller */,
+				D8A621651F0DA44300BE1F2F /* view */,
+			);
+			name = "相机＋分享";
+			sourceTree = "<group>";
+		};
+		D8A621651F0DA44300BE1F2F /* view */ = {
+			isa = PBXGroup;
+			children = (
 				D8B20EFB1F0C58DB00555CD0 /* XRSportCameraMaskView.h */,
 				D8B20EFC1F0C58DB00555CD0 /* XRSportCameraMaskView.m */,
 			);
-			name = "相机＋分享";
+			name = view;
+			sourceTree = "<group>";
+		};
+		D8A621661F0DA45200BE1F2F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D88987131F02E6F00081F192 /* XRSportCameraViewController.h */,
+				D88987141F02E6F00081F192 /* XRSportCameraViewController.m */,
+				D88987171F02ECFA0081F192 /* XRSportCameraViewController.xib */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 		D8DFF4DF1ECE501E000921CD = {

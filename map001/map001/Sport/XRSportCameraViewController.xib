@@ -87,6 +87,9 @@
                 </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PMI-wI-eXm" userLabel="关闭">
                     <state key="normal" image="ic_waterprint_close"/>
+                    <connections>
+                        <action selector="close" destination="-1" eventType="touchUpInside" id="ZdP-T1-jZd"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lvf-lC-7Cy">
                     <fontDescription key="fontDescription" type="system" pointSize="48"/>
@@ -95,31 +98,27 @@
                         <action selector="capture" destination="-1" eventType="touchUpInside" id="qpg-rk-ZzD"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T6i-Gx-Rb7" userLabel="shared">
-                    <state key="normal" image="ic_waterprint_share"/>
-                </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M7W-uK-6PZ" userLabel="镜头旋转">
                     <state key="normal" image="ic_waterprint_revolve"/>
+                    <connections>
+                        <action selector="switchCamera" destination="-1" eventType="touchUpInside" id="tpX-lY-kek"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="Lvf-lC-7Cy" secondAttribute="bottom" constant="32" id="2ZZ-4C-pp1"/>
+                <constraint firstAttribute="bottom" secondItem="M7W-uK-6PZ" secondAttribute="bottom" constant="49" id="Eb6-5G-xDc"/>
                 <constraint firstItem="IMU-F4-lmb" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="FhB-2U-C1a"/>
-                <constraint firstItem="M7W-uK-6PZ" firstAttribute="centerX" secondItem="T6i-Gx-Rb7" secondAttribute="centerX" id="HXi-mN-atb"/>
+                <constraint firstAttribute="trailing" secondItem="M7W-uK-6PZ" secondAttribute="trailing" constant="16" id="GjQ-Yf-oc5"/>
                 <constraint firstItem="Lvf-lC-7Cy" firstAttribute="top" secondItem="IMU-F4-lmb" secondAttribute="bottom" constant="32" id="Ksi-5k-mqd"/>
-                <constraint firstItem="T6i-Gx-Rb7" firstAttribute="centerY" secondItem="Lvf-lC-7Cy" secondAttribute="centerY" id="MYl-AM-INc"/>
                 <constraint firstItem="Lvf-lC-7Cy" firstAttribute="centerY" secondItem="PMI-wI-eXm" secondAttribute="centerY" id="NRx-l5-3Gs"/>
                 <constraint firstAttribute="bottom" secondItem="IMU-F4-lmb" secondAttribute="bottom" constant="130" id="OI2-ZJ-y3E"/>
                 <constraint firstAttribute="trailing" secondItem="IMU-F4-lmb" secondAttribute="trailing" id="RCu-UK-ukj"/>
-                <constraint firstAttribute="trailing" secondItem="T6i-Gx-Rb7" secondAttribute="trailing" constant="16" id="Sjq-9w-mD4"/>
                 <constraint firstItem="IMU-F4-lmb" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Zjn-MJ-inN"/>
                 <constraint firstItem="PMI-wI-eXm" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="aHN-Xe-WH4"/>
                 <constraint firstItem="Lvf-lC-7Cy" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="bI8-vb-BAL"/>
                 <constraint firstAttribute="trailing" secondItem="IMU-F4-lmb" secondAttribute="trailing" id="cuI-5f-Jp0"/>
-                <constraint firstItem="M7W-uK-6PZ" firstAttribute="centerY" secondItem="T6i-Gx-Rb7" secondAttribute="centerY" id="dT4-EG-KJH"/>
-                <constraint firstItem="M7W-uK-6PZ" firstAttribute="height" secondItem="T6i-Gx-Rb7" secondAttribute="height" id="g80-me-2ex"/>
-                <constraint firstItem="M7W-uK-6PZ" firstAttribute="width" secondItem="T6i-Gx-Rb7" secondAttribute="width" id="pu6-Jh-cbc"/>
             </constraints>
             <point key="canvasLocation" x="59.5" y="134.5"/>
         </view>
@@ -130,7 +129,6 @@
         <image name="ic_waterprint_action_oriented" width="211" height="43"/>
         <image name="ic_waterprint_close" width="32" height="32"/>
         <image name="ic_waterprint_revolve" width="32" height="32"/>
-        <image name="ic_waterprint_share" width="32" height="32"/>
         <image name="ic_waterprint_shutter" width="66" height="66"/>
     </resources>
 </document>
